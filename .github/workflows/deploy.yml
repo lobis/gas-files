@@ -24,6 +24,10 @@ jobs:
         run: |
           find ./files -type f -name *.tar.gz -exec rm {} \;
 
+      - name: Generate json file with gas properties
+        run: |
+          find ./files -type f -exec gas-cli read -i {} --json \;
+
       - name: Move into public directory
         run: |
           mv files/ public/
