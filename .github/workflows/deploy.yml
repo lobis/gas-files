@@ -59,4 +59,6 @@ jobs:
       - name: Create simple HTML file tree
         run: |
           sudo apt-get install -y tree
-          tree public/ -H https://lobis.github.io/gas-files/ -T "Garfield gas files" > public/index.html
+          tree public/ -H https://lobis.github.io/gas-files/ -T "Garfield gas files" > test.html
+          cat test.html
+          mv test.html public/index.html
