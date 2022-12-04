@@ -32,11 +32,6 @@ jobs:
         run: |
           ls -lhtR public/
 
-      - name: Create simple HTTP file tree
-        run: |
-          apt update && apt install -y tree
-          tree public/ -H https://lobis.github.io/gas-files > public/index.html
-
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
@@ -60,3 +55,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+
+      - name: Create simple HTML file tree
+        run: |
+          apt update && apt install -y tree
+          tree public/ -H https://lobis.github.io/gas-files/ -T "Garfield gas files" > public/index.html
