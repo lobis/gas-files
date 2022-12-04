@@ -32,6 +32,11 @@ jobs:
         run: |
           ls -lhtR public/
 
+      - name: Create simple HTTP file tree
+        run: |
+          apt update && apt install -y tree
+          tree public/ -H https://lobis.github.io/gas-files > public/index.html
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
