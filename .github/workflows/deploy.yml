@@ -32,11 +32,10 @@ jobs:
         run: |
           ls -lhtR public/
 
-      - name: Cache gas files
-        uses: actions/cache@v3
-        id: cache
+      - name: Upload gas files artifact
+        uses: actions/upload-artifact@v3
         with:
-          key: gas-files-${{ github.run_id }}
+          name: gas-files
           path: public/
 
   pages-artifact:
@@ -45,11 +44,10 @@ jobs:
     needs: gas-files
 
     steps:
-      - name: Restore cache
-        uses: actions/cache@v3
-        id: cache
+      - name: Download gas files artifact
+        uses: actions/download-artifact@v3
         with:
-          key: gas-files-${{ github.run_id }}
+          name: gas-files
           path: public/
 
       - name: Create HTML file tree
