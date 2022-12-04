@@ -1,0 +1,2 @@
+# We only store compressed gas files
+*.gas
