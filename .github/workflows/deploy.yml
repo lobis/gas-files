@@ -28,17 +28,13 @@ jobs:
         run: |
           mv files/ public/
 
-      - name: Cache gas files
-        uses: actions/cache@v3
-        id: cache
-        with:
-          key: gas-files-${{ github.run_id }}
-          path: public/
+      - name: List gas files
+        run: |
+          ls -lhtR public/
 
-      - name: Upload gas files artifact
-        uses: actions/upload-artifact@v3
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          name: gas-files
           path: public/
 
   deploy: # https://github.com/actions/deploy-pages
