@@ -26,7 +26,7 @@ jobs:
 
       - name: Generate json file with gas properties
         run: |
-          find ./files -type f -exec gas-cli read -i {} --json \;
+          find ./files -type f -exec gas-cli read -i {} --json {}.json \;
 
       - name: Move into public directory
         run: |
