@@ -32,6 +32,30 @@ jobs:
         run: |
           ls -lhtR public/
 
+      - name: Cache gas files
+        uses: actions/cache@v3
+        id: cache
+        with:
+          key: gas-files-${{ github.run_id }}
+          path: public/
+
+  pages-artifact:
+    name: Generate HTML file tree and upload pages artifact
+    runs-on: ubuntu-latest
+    needs: gas-files
+
+    steps:
+      - name: Restore cache
+        uses: actions/cache@v3
+        id: cache
+        with:
+          key: gas-files-${{ github.run_id }}
+          path: public/
+
+      - name: Create HTML file tree
+        run: |
+          tree public/ -H https://lobis.github.io/gas-files/ -T "Garfield gas files" > public/index.html
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
@@ -40,7 +64,7 @@ jobs:
   deploy: # https://github.com/actions/deploy-pages
     name: GitHub Pages deployment
     runs-on: ubuntu-latest
-    needs: gas-files
+    needs: pages-artifact
 
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
@@ -55,13 +79,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
-
-      - name: Create simple HTML file tree
-        run: |
-          tree public/
-          tree public/ -H https://lobis.github.io/gas-files/ -T "Garfield gas files" > test.html
-
-      - name: Debug
-        run: |
-          cat test.html
-          mv test.html public/index.html
