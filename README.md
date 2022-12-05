@@ -1,4 +1,7 @@
-# gas-files
+
+[![deploy](https://github.com/lobis/gas-files/actions/workflows/deploy.yml/badge.svg)](https://github.com/lobis/gas-files/actions/workflows/deploy.yml)
+
+# Garfield Gas Files Database
 
 This repository serves as a database of [Garfield](https://gitlab.cern.ch/garfield/garfieldpp) gas files produced using [gas-cli](https://github.com/lobis/gas-cli).
 
