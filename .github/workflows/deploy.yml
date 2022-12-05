@@ -48,6 +48,9 @@ jobs:
     needs: gas-files
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
       - name: Download gas files artifact
         uses: actions/download-artifact@v3
         with:
@@ -56,7 +59,7 @@ jobs:
 
       - name: Create HTML file tree
         run: |
-          tree public/ -H https://lobis.github.io/gas-files/ -T "Garfield gas files" > public/index.html
+          python scripts/file_tree_html.py public/
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
