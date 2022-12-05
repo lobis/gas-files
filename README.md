@@ -1,6 +1,6 @@
 
 [![deploy](https://github.com/lobis/gas-files/actions/workflows/deploy.yml/badge.svg)](https://github.com/lobis/gas-files/actions/workflows/deploy.yml)
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lobis/gas-files/HEAD?labpath=examples%2Fdrift_velocity.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lobis/gas-files/HEAD?labpath=notebooks%2Fdrift_velocity.ipynb)
 
 # Garfield Gas Files Database
 
