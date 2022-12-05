@@ -59,7 +59,7 @@ jobs:
 
       - name: Create HTML file tree
         run: |
-          python scripts/file_tree_html.py public/
+          python scripts/file_tree_html.py public/files/
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
