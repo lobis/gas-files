@@ -36,9 +36,9 @@ jobs:
         run: |
           ls -lhtR public/
 
-      - name: Size of uncompressed files
+      - name: Size of all database files
         run: |
-          du -sh -- files/
+          du -sh -- public/files
 
       - name: Upload gas files artifact
         uses: actions/upload-artifact@v3
