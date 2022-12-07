@@ -69,6 +69,10 @@ jobs:
         run: |
           python scripts/file_tree_html.py public/files/
 
+      - name: Generate file list
+        run: |
+          python scripts/file_list.py public/files/ public/files/list.json
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
