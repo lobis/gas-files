@@ -14,13 +14,9 @@ def generate_html_list(path: Path):
 
         if os.path.isdir(item_path):
             list_items_html.append(
-                f"<li>{item}<ul>{generate_html_list(Path(item_path))}</ul></li>")
+                f"<li><details open><summary>{item}</summary>{generate_html_list(Path(item_path))}</details></li>")
         else:
-            # only show files with .gas extension (and related)
-            if not item.endswith(".gas") and not item.endswith(".gas.json"):
-                continue
-
-            # replace the root directory with the url of the github pages site
+           # replace the root directory with the url of the github pages site
             list_items_html.append(
                 f"""<li><a href={"https://lobis.github.io/gas-files/" + "/".join(path.as_posix().split("/")[1:]) + "/" + item}>{item}</a></li>"""
             )
