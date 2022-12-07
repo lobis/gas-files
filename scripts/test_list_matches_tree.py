@@ -7,7 +7,7 @@ import re
 import argparse
 
 
-def test_list_matches_tree(list_path: Path, html_path: Path):
+def test_list_matches_tree(list_path: Path, html_path: Path, files_path: Path = None):
     with open(list_path, "r") as f:
         data = json.load(f)
 
@@ -25,6 +25,12 @@ def test_list_matches_tree(list_path: Path, html_path: Path):
         "https://lobis.github.io/gas-files/") and url.endswith(".gas.json")]
 
     print("from html after:", urls_from_html)
+
+    # check the number of files matches the files in files_path
+    if files_path is not None:
+        files = [file for file in files_path.iterdir() if file.suffix == ".gas"]
+        print(len(files), files)
+        # assert len(files) == len(urls_from_list)
 
     # check that the number of links in the html page matches the number of urls in the json file
     assert len(urls_from_list) == len(urls_from_html)

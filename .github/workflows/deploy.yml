@@ -67,7 +67,9 @@ jobs:
 
       - name: Create HTML file tree
         run: |
-          python scripts/file_tree_html.py public/files/ public/index.html
+          cd public
+          python scripts/file_tree_html.py files/ ./index.html
+          cat ./index.html
 
       - name: Generate file list
         run: |
