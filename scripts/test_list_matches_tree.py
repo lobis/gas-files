@@ -12,16 +12,19 @@ def test_list_matches_tree(list_path: Path, html_path: Path):
         data = json.load(f)
 
     urls_from_list = [item["url"] for item in data]
-
+    print("from list:", urls_from_list)
     with open(html_path, "r") as f:
         content = f.read()
 
     # get all links in the html page
     urls_from_html = re.findall(r"""<a href="(.+?)">""", content)
+    print("from html:", urls_from_html)
 
     # keep only those matching pattern https://lobis.github.io/gas-files/*.gas.json
     urls_from_html = [url for url in urls_from_html if url.startswith(
         "https://lobis.github.io/gas-files/") and url.endswith(".gas.json")]
+
+    print("from html after:", urls_from_html)
 
     # check that the number of links in the html page matches the number of urls in the json file
     assert len(urls_from_list) == len(urls_from_html)

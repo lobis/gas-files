@@ -75,7 +75,7 @@ jobs:
 
       - name: Verify list and links in html match
         run: |
-          python scripts/check_list_matches_tree.py public/files/list.json public/index.html
+          python scripts/test_list_matches_tree.py public/files/list.json public/index.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
