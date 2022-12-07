@@ -35,6 +35,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("root_dir", type=Path,
                         help="Root directory to generate the tree for")
+    parser.add_argument("output", type=Path,
+                        help="Path to output file")
+
     args = parser.parse_args()
 
     tree = generate_html_list(args.root_dir)
@@ -42,8 +45,7 @@ if __name__ == "__main__":
     # open the first <details> tag
     tree = tree.replace("<details closed>", "<details open>", 1)
 
-    # insert the tree into index.html
-    index_html_path = Path(__file__).parent.parent / "public" / "index.html"
+    index_html_path = args.output
     with open(index_html_path, "r") as f:
         content = f.read()
         to_replace = "<div id=\"tree\"></div>"

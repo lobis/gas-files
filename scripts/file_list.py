@@ -7,7 +7,6 @@ import argparse
 
 
 def parse_gas_json(path: Path) -> dict:
-    print(path)
     with open(path, "r") as f:
         data = json.load(f)
         return dict(
@@ -46,4 +45,4 @@ if __name__ == "__main__":
     file_list = generate_file_list(args.root_dir)
 
     with open(args.output, "w") as f:
-        json.dump(file_list, f, indent=4)
+        json.dump(file_list, f)
