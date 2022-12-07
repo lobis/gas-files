@@ -14,11 +14,18 @@ def generate_html_list(path: Path):
 
         if os.path.isdir(item_path):
             list_items_html.append(
-                f"<li><details open><summary>{item}</summary>{generate_html_list(Path(item_path))}</details></li>")
+                f"<li class=directory><details closed><summary>{item}</summary>{generate_html_list(Path(item_path))}</details></li>")
         else:
-           # replace the root directory with the url of the github pages site
+            # only show files with .gas extension (and related)
+            if not item.endswith(".gas") and not item.endswith(".gas.json"):
+                # continue
+                pass
+
+            # get extension of file
+            extension = item.split(".")[-1]
+            # replace the root directory with the url of the github pages site
             list_items_html.append(
-                f"""<li><a href={"https://lobis.github.io/gas-files/" + "/".join(path.as_posix().split("/")[1:]) + "/" + item}>{item}</a></li>"""
+                f"""<li class="file file-{extension}"><a href={"https://lobis.github.io/gas-files/" + "/".join(path.as_posix().split("/")[1:]) + "/" + item}>{item}</a></li>"""
             )
 
     return "<ul>" + "".join(list_items_html).replace("<ul></ul>", "") + "</ul>"
@@ -31,6 +38,9 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     tree = generate_html_list(args.root_dir)
+
+    # open the first <details> tag
+    tree = tree.replace("<details closed>", "<details open>", 1)
 
     # insert the tree into index.html
     index_html_path = Path(__file__).parent.parent / "public" / "index.html"
