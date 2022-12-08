@@ -67,13 +67,12 @@ jobs:
 
       - name: Create HTML file tree
         run: |
-          cd public
-          python ../scripts/file_tree_html.py files/ ./index.html
-          cat ./index.html
+          python scripts/file_tree_html.py public/files/ public/index.html
 
       - name: Generate file list
         run: |
-          python scripts/file_list.py public/files/ public/files/list.json
+          cd public
+          python ../scripts/file_list.py files/ files/list.json
 
       - name: Verify list and links in html match
         run: |

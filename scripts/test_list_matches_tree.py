@@ -17,7 +17,7 @@ def test_list_matches_tree(list_path: Path, html_path: Path, files_path: Path = 
         content = f.read()
 
     # get all links in the html page
-    urls_from_html = re.findall(r"""<a href="(.+?)">""", content)
+    urls_from_html = re.findall(r"<a href=(.+?)>", content)
     print("from html:", urls_from_html)
 
     # keep only those matching pattern https://lobis.github.io/gas-files/*.gas.json
