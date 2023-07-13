@@ -1,4 +1,3 @@
-
 # verify links in the html page and urls in the json file match
 
 import json
@@ -19,8 +18,12 @@ def test_list_matches_tree(list_path: Path, html_path: Path, files_path: Path = 
     urls_from_html = re.findall(r"<a href=(.+?)>", content)
 
     # keep only those matching pattern https://lobis.github.io/gas-files/*.gas.json
-    urls_from_html = [url for url in urls_from_html if url.startswith(
-        "https://lobis.github.io/gas-files/") and url.endswith(".gas.json")]
+    urls_from_html = [
+        url
+        for url in urls_from_html
+        if url.startswith("https://lobis.github.io/gas-files/")
+        and url.endswith(".gas.json")
+    ]
 
     # check the number of files matches the files in files_path
     if files_path is not None:
@@ -36,12 +39,18 @@ def test_list_matches_tree(list_path: Path, html_path: Path, files_path: Path = 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("list_path", type=Path,
-                        help="Path to json file with list of gas files")
-    parser.add_argument("html_path", type=Path,
-                        help="Path to html file with tree of gas files")
+    parser.add_argument(
+        "list_path", type=Path, help="Path to json file with list of gas files"
+    )
+    parser.add_argument(
+        "html_path", type=Path, help="Path to html file with tree of gas files"
+    )
     # add optional argument that defaults to None
-    parser.add_argument("--files_path", type=Path, default=None,)
+    parser.add_argument(
+        "--files_path",
+        type=Path,
+        default=None,
+    )
 
     args = parser.parse_args()
 

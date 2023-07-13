@@ -1,4 +1,3 @@
-
 # generate a json file listing all gas files
 
 from pathlib import Path
@@ -14,7 +13,7 @@ def parse_gas_json(path: Path) -> dict:
             name=data["name"],
             pressure=data["pressure"],
             temperature=data["temperature"],
-            url=f"""https://lobis.github.io/gas-files/{path.as_posix()}"""
+            url=f"""https://lobis.github.io/gas-files/{path.as_posix()}""",
         )
 
 
@@ -36,10 +35,10 @@ def generate_file_list(path: Path):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("root_dir", type=Path,
-                        help="Root directory to scan for gas files")
-    parser.add_argument("output", type=Path,
-                        help="Path to output file")
+    parser.add_argument(
+        "root_dir", type=Path, help="Root directory to scan for gas files"
+    )
+    parser.add_argument("output", type=Path, help="Path to output file")
     args = parser.parse_args()
 
     file_list = generate_file_list(args.root_dir)

@@ -1,4 +1,3 @@
-
 # Generate a html file tree from a directory
 
 import os
@@ -14,7 +13,8 @@ def generate_html_list(path: Path):
 
         if os.path.isdir(item_path):
             list_items_html.append(
-                f"<li class=directory><details closed><summary>{item}</summary>{generate_html_list(Path(item_path))}</details></li>")
+                f"<li class=directory><details closed><summary>{item}</summary>{generate_html_list(Path(item_path))}</details></li>"
+            )
         else:
             # only show files with .gas extension (and related)
             if not item.endswith(".gas") and not item.endswith(".gas.json"):
@@ -33,10 +33,10 @@ def generate_html_list(path: Path):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("root_dir", type=Path,
-                        help="Root directory to generate the tree for")
-    parser.add_argument("output", type=Path,
-                        help="Path to output file")
+    parser.add_argument(
+        "root_dir", type=Path, help="Root directory to generate the tree for"
+    )
+    parser.add_argument("output", type=Path, help="Path to output file")
 
     args = parser.parse_args()
 
@@ -48,10 +48,9 @@ if __name__ == "__main__":
     index_html_path = args.output
     with open(index_html_path, "r") as f:
         content = f.read()
-        to_replace = "<div id=\"tree\"></div>"
+        to_replace = '<div id="tree"></div>'
         if content.count(to_replace) != 1:
             raise Exception("Unexpected number of matches")
-        content = content.replace(
-            to_replace, f"<div id=\"tree\">{tree}</div>")
+        content = content.replace(to_replace, f'<div id="tree">{tree}</div>')
     with open(index_html_path, "w") as f:
         f.write(content)
