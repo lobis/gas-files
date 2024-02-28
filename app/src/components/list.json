@@ -1,0 +1,3864 @@
+[
+  {
+    "components": {
+      "fractions": [
+        1.0
+      ],
+      "labels": [
+        "Ar"
+      ]
+    },
+    "name": "Ar_100",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/single/Ar.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        1.0
+      ],
+      "labels": [
+        "He"
+      ]
+    },
+    "name": "He_100",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/single/He.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        1.0
+      ],
+      "labels": [
+        "Kr"
+      ]
+    },
+    "name": "Kr_100",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/single/Kr.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        1.0
+      ],
+      "labels": [
+        "Ne"
+      ]
+    },
+    "name": "Ne_100",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/single/Ne.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        1.0
+      ],
+      "labels": [
+        "Xe"
+      ]
+    },
+    "name": "Xe_100",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/single/Xe.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.8,
+        0.2
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_80-iC4H10_20",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_80.0-C4H10_20.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.805,
+        0.195
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_80.5-iC4H10_19.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_80.5-C4H10_19.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.81,
+        0.19
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_81-iC4H10_19",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_81.0-C4H10_19.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.815,
+        0.185
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_81.5-iC4H10_18.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_81.5-C4H10_18.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.82,
+        0.18
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_82-iC4H10_18",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_82.0-C4H10_18.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.825,
+        0.175
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_82.5-iC4H10_17.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_82.5-C4H10_17.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.83,
+        0.17
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_83-iC4H10_17",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_83.0-C4H10_17.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.835,
+        0.165
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_83.5-iC4H10_16.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_83.5-C4H10_16.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.84,
+        0.16
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_84-iC4H10_16",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_84.0-C4H10_16.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.845,
+        0.155
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_84.5-iC4H10_15.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_84.5-C4H10_15.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.85,
+        0.15
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_85-iC4H10_15",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_85.0-C4H10_15.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.855,
+        0.145
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_85.5-iC4H10_14.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_85.5-C4H10_14.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.86,
+        0.14
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_86-iC4H10_14",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_86.0-C4H10_14.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.865,
+        0.135
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_86.5-iC4H10_13.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_86.5-C4H10_13.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.87,
+        0.13
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_87-iC4H10_13",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_87.0-C4H10_13.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.875,
+        0.125
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_87.5-iC4H10_12.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_87.5-C4H10_12.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.88,
+        0.12
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_88-iC4H10_12",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_88.0-C4H10_12.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.885,
+        0.115
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_88.5-iC4H10_11.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_88.5-C4H10_11.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.89,
+        0.11
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_89-iC4H10_11",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_89.0-C4H10_11.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.895,
+        0.105
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_89.5-iC4H10_10.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_89.5-C4H10_10.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.9,
+        0.1
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_90-iC4H10_10",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_90.0-C4H10_10.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.905,
+        0.095
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_90.5-iC4H10_9.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_90.5-C4H10_9.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.91,
+        0.09
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_91-iC4H10_9",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_91.0-C4H10_9.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.915,
+        0.085
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_91.5-iC4H10_8.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_91.5-C4H10_8.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.92,
+        0.08
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_92-iC4H10_8",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_92.0-C4H10_8.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.925,
+        0.075
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_92.5-iC4H10_7.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_92.5-C4H10_7.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.93,
+        0.07
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_93-iC4H10_7",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_93.0-C4H10_7.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.935,
+        0.065
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_93.5-iC4H10_6.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_93.5-C4H10_6.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.94,
+        0.06
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_94-iC4H10_6",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_94.0-C4H10_6.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.945,
+        0.055
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_94.5-iC4H10_5.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_94.5-C4H10_5.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.95,
+        0.05
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_95-iC4H10_5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_95.0-C4H10_5.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.955,
+        0.045
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_95.5-iC4H10_4.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_95.5-C4H10_4.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.96,
+        0.04
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_96-iC4H10_4",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_96.0-C4H10_4.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.965,
+        0.035
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_96.5-iC4H10_3.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_96.5-C4H10_3.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.97,
+        0.03
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_97-iC4H10_3",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_97.0-C4H10_3.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.975,
+        0.025
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_97.5-iC4H10_2.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_97.5-C4H10_2.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.98,
+        0.02
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_98-iC4H10_2",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_98.0-C4H10_2.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.985,
+        0.015
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_98.5-iC4H10_1.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_98.5-C4H10_1.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.99,
+        0.01
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_99-iC4H10_1",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_99.0-C4H10_1.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.995,
+        0.005
+      ],
+      "labels": [
+        "Ar",
+        "iC4H10"
+      ]
+    },
+    "name": "Ar_99.5-iC4H10_0.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-C4H10/Ar_99.5-C4H10_0.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.8,
+        0.2
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_80-CH4_20",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_80.0-CH4_20.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.805,
+        0.195
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_80.5-CH4_19.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_80.5-CH4_19.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.81,
+        0.19
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_81-CH4_19",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_81.0-CH4_19.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.815,
+        0.185
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_81.5-CH4_18.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_81.5-CH4_18.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.82,
+        0.18
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_82-CH4_18",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_82.0-CH4_18.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.825,
+        0.175
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_82.5-CH4_17.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_82.5-CH4_17.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.83,
+        0.17
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_83-CH4_17",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_83.0-CH4_17.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.835,
+        0.165
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_83.5-CH4_16.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_83.5-CH4_16.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.84,
+        0.16
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_84-CH4_16",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_84.0-CH4_16.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.845,
+        0.155
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_84.5-CH4_15.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_84.5-CH4_15.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.85,
+        0.15
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_85-CH4_15",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_85.0-CH4_15.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.855,
+        0.145
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_85.5-CH4_14.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_85.5-CH4_14.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.86,
+        0.14
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_86-CH4_14",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_86.0-CH4_14.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.865,
+        0.135
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_86.5-CH4_13.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_86.5-CH4_13.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.87,
+        0.13
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_87-CH4_13",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_87.0-CH4_13.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.875,
+        0.125
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_87.5-CH4_12.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_87.5-CH4_12.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.88,
+        0.12
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_88-CH4_12",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_88.0-CH4_12.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.885,
+        0.115
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_88.5-CH4_11.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_88.5-CH4_11.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.89,
+        0.11
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_89-CH4_11",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_89.0-CH4_11.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.895,
+        0.105
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_89.5-CH4_10.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_89.5-CH4_10.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.9,
+        0.1
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_90-CH4_10",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_90.0-CH4_10.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.905,
+        0.095
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_90.5-CH4_9.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_90.5-CH4_9.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.91,
+        0.09
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_91-CH4_9",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_91.0-CH4_9.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.915,
+        0.085
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_91.5-CH4_8.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_91.5-CH4_8.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.92,
+        0.08
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_92-CH4_8",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_92.0-CH4_8.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.925,
+        0.075
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_92.5-CH4_7.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_92.5-CH4_7.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.93,
+        0.07
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_93-CH4_7",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_93.0-CH4_7.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.935,
+        0.065
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_93.5-CH4_6.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_93.5-CH4_6.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.94,
+        0.06
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_94-CH4_6",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_94.0-CH4_6.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.945,
+        0.055
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_94.5-CH4_5.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_94.5-CH4_5.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.95,
+        0.05
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_95-CH4_5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_95.0-CH4_5.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.955,
+        0.045
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_95.5-CH4_4.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_95.5-CH4_4.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.96,
+        0.04
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_96-CH4_4",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_96.0-CH4_4.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.965,
+        0.035
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_96.5-CH4_3.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_96.5-CH4_3.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.97,
+        0.03
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_97-CH4_3",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_97.0-CH4_3.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.975,
+        0.025
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_97.5-CH4_2.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_97.5-CH4_2.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.98,
+        0.02
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_98-CH4_2",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_98.0-CH4_2.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.985,
+        0.015
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_98.5-CH4_1.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_98.5-CH4_1.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.99,
+        0.01
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_99-CH4_1",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_99.0-CH4_1.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.995,
+        0.005
+      ],
+      "labels": [
+        "Ar",
+        "CH4"
+      ]
+    },
+    "name": "Ar_99.5-CH4_0.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ar-CH4/Ar_99.5-CH4_0.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.8,
+        0.2
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_80-iC4H10_20",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_80.0-C4H10_20.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.805,
+        0.195
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_80.5-iC4H10_19.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_80.5-C4H10_19.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.81,
+        0.19
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_81-iC4H10_19",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_81.0-C4H10_19.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.815,
+        0.185
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_81.5-iC4H10_18.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_81.5-C4H10_18.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.82,
+        0.18
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_82-iC4H10_18",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_82.0-C4H10_18.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.825,
+        0.175
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_82.5-iC4H10_17.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_82.5-C4H10_17.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.83,
+        0.17
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_83-iC4H10_17",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_83.0-C4H10_17.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.835,
+        0.165
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_83.5-iC4H10_16.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_83.5-C4H10_16.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.84,
+        0.16
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_84-iC4H10_16",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_84.0-C4H10_16.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.845,
+        0.155
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_84.5-iC4H10_15.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_84.5-C4H10_15.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.85,
+        0.15
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_85-iC4H10_15",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_85.0-C4H10_15.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.855,
+        0.145
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_85.5-iC4H10_14.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_85.5-C4H10_14.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.86,
+        0.14
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_86-iC4H10_14",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_86.0-C4H10_14.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.865,
+        0.135
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_86.5-iC4H10_13.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_86.5-C4H10_13.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.87,
+        0.13
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_87-iC4H10_13",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_87.0-C4H10_13.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.875,
+        0.125
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_87.5-iC4H10_12.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_87.5-C4H10_12.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.88,
+        0.12
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_88-iC4H10_12",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_88.0-C4H10_12.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.885,
+        0.115
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_88.5-iC4H10_11.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_88.5-C4H10_11.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.89,
+        0.11
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_89-iC4H10_11",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_89.0-C4H10_11.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.895,
+        0.105
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_89.5-iC4H10_10.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_89.5-C4H10_10.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.9,
+        0.1
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_90-iC4H10_10",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_90.0-C4H10_10.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.905,
+        0.095
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_90.5-iC4H10_9.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_90.5-C4H10_9.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.91,
+        0.09
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_91-iC4H10_9",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_91.0-C4H10_9.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.915,
+        0.085
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_91.5-iC4H10_8.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_91.5-C4H10_8.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.92,
+        0.08
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_92-iC4H10_8",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_92.0-C4H10_8.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.925,
+        0.075
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_92.5-iC4H10_7.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_92.5-C4H10_7.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.93,
+        0.07
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_93-iC4H10_7",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_93.0-C4H10_7.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.935,
+        0.065
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_93.5-iC4H10_6.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_93.5-C4H10_6.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.94,
+        0.06
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_94-iC4H10_6",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_94.0-C4H10_6.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.945,
+        0.055
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_94.5-iC4H10_5.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_94.5-C4H10_5.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.95,
+        0.05
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_95-iC4H10_5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_95.0-C4H10_5.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.955,
+        0.045
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_95.5-iC4H10_4.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_95.5-C4H10_4.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.96,
+        0.04
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_96-iC4H10_4",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_96.0-C4H10_4.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.965,
+        0.035
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_96.5-iC4H10_3.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_96.5-C4H10_3.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.97,
+        0.03
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_97-iC4H10_3",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_97.0-C4H10_3.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.975,
+        0.025
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_97.5-iC4H10_2.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_97.5-C4H10_2.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.98,
+        0.02
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_98-iC4H10_2",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_98.0-C4H10_2.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.985,
+        0.015
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_98.5-iC4H10_1.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_98.5-C4H10_1.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.99,
+        0.01
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_99-iC4H10_1",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_99.0-C4H10_1.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.995,
+        0.005
+      ],
+      "labels": [
+        "Ne",
+        "iC4H10"
+      ]
+    },
+    "name": "Ne_99.5-iC4H10_0.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-C4H10/Ne_99.5-C4H10_0.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.8,
+        0.2
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_80-CH4_20",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_80.0-CH4_20.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.81,
+        0.19
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_81-CH4_19",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_81.0-CH4_19.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.815,
+        0.185
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_81.5-CH4_18.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_81.5-CH4_18.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.82,
+        0.18
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_82-CH4_18",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_82.0-CH4_18.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.825,
+        0.175
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_82.5-CH4_17.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_82.5-CH4_17.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.83,
+        0.17
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_83-CH4_17",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_83.0-CH4_17.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.835,
+        0.165
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_83.5-CH4_16.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_83.5-CH4_16.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.84,
+        0.16
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_84-CH4_16",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_84.0-CH4_16.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.845,
+        0.155
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_84.5-CH4_15.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_84.5-CH4_15.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.85,
+        0.15
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_85-CH4_15",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_85.0-CH4_15.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.855,
+        0.145
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_85.5-CH4_14.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_85.5-CH4_14.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.86,
+        0.14
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_86-CH4_14",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_86.0-CH4_14.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.865,
+        0.135
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_86.5-CH4_13.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_86.5-CH4_13.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.87,
+        0.13
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_87-CH4_13",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_87.0-CH4_13.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.875,
+        0.125
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_87.5-CH4_12.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_87.5-CH4_12.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.88,
+        0.12
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_88-CH4_12",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_88.0-CH4_12.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.885,
+        0.115
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_88.5-CH4_11.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_88.5-CH4_11.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.89,
+        0.11
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_89-CH4_11",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_89.0-CH4_11.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.895,
+        0.105
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_89.5-CH4_10.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_89.5-CH4_10.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.9,
+        0.1
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_90-CH4_10",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_90.0-CH4_10.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.905,
+        0.095
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_90.5-CH4_9.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_90.5-CH4_9.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.91,
+        0.09
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_91-CH4_9",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_91.0-CH4_9.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.915,
+        0.085
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_91.5-CH4_8.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_91.5-CH4_8.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.92,
+        0.08
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_92-CH4_8",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_92.0-CH4_8.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.925,
+        0.075
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_92.5-CH4_7.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_92.5-CH4_7.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.93,
+        0.07
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_93-CH4_7",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_93.0-CH4_7.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.935,
+        0.065
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_93.5-CH4_6.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_93.5-CH4_6.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.94,
+        0.06
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_94-CH4_6",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_94.0-CH4_6.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.945,
+        0.055
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_94.5-CH4_5.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_94.5-CH4_5.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.95,
+        0.05
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_95-CH4_5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_95.0-CH4_5.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.955,
+        0.045
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_95.5-CH4_4.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_95.5-CH4_4.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.96,
+        0.04
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_96-CH4_4",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_96.0-CH4_4.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.965,
+        0.035
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_96.5-CH4_3.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_96.5-CH4_3.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.97,
+        0.03
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_97-CH4_3",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_97.0-CH4_3.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.975,
+        0.025
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_97.5-CH4_2.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_97.5-CH4_2.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.98,
+        0.02
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_98-CH4_2",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_98.0-CH4_2.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.985,
+        0.015
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_98.5-CH4_1.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_98.5-CH4_1.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.99,
+        0.01
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_99-CH4_1",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_99.0-CH4_1.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.995,
+        0.005
+      ],
+      "labels": [
+        "Ne",
+        "CH4"
+      ]
+    },
+    "name": "Ne_99.5-CH4_0.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Ne-CH4/Ne_99.5-CH4_0.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.8,
+        0.2
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_80-iC4H10_20",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_80.0-C4H10_20.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.805,
+        0.195
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_80.5-iC4H10_19.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_80.5-C4H10_19.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.81,
+        0.19
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_81-iC4H10_19",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_81.0-C4H10_19.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.815,
+        0.185
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_81.5-iC4H10_18.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_81.5-C4H10_18.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.82,
+        0.18
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_82-iC4H10_18",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_82.0-C4H10_18.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.825,
+        0.175
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_82.5-iC4H10_17.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_82.5-C4H10_17.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.83,
+        0.17
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_83-iC4H10_17",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_83.0-C4H10_17.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.835,
+        0.165
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_83.5-iC4H10_16.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_83.5-C4H10_16.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.84,
+        0.16
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_84-iC4H10_16",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_84.0-C4H10_16.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.845,
+        0.155
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_84.5-iC4H10_15.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_84.5-C4H10_15.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.85,
+        0.15
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_85-iC4H10_15",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_85.0-C4H10_15.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.855,
+        0.145
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_85.5-iC4H10_14.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_85.5-C4H10_14.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.86,
+        0.14
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_86-iC4H10_14",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_86.0-C4H10_14.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.865,
+        0.135
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_86.5-iC4H10_13.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_86.5-C4H10_13.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.87,
+        0.13
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_87-iC4H10_13",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_87.0-C4H10_13.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.875,
+        0.125
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_87.5-iC4H10_12.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_87.5-C4H10_12.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.88,
+        0.12
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_88-iC4H10_12",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_88.0-C4H10_12.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.885,
+        0.115
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_88.5-iC4H10_11.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_88.5-C4H10_11.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.895,
+        0.105
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_89.5-iC4H10_10.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_89.5-C4H10_10.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.9,
+        0.1
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_90-iC4H10_10",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_90.0-C4H10_10.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.905,
+        0.095
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_90.5-iC4H10_9.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_90.5-C4H10_9.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.91,
+        0.09
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_91-iC4H10_9",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_91.0-C4H10_9.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.915,
+        0.085
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_91.5-iC4H10_8.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_91.5-C4H10_8.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.92,
+        0.08
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_92-iC4H10_8",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_92.0-C4H10_8.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.925,
+        0.075
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_92.5-iC4H10_7.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_92.5-C4H10_7.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.93,
+        0.07
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_93-iC4H10_7",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_93.0-C4H10_7.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.935,
+        0.065
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_93.5-iC4H10_6.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_93.5-C4H10_6.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.94,
+        0.06
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_94-iC4H10_6",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_94.0-C4H10_6.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.945,
+        0.055
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_94.5-iC4H10_5.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_94.5-C4H10_5.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.95,
+        0.05
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_95-iC4H10_5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_95.0-C4H10_5.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.955,
+        0.045
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_95.5-iC4H10_4.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_95.5-C4H10_4.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.96,
+        0.04
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_96-iC4H10_4",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_96.0-C4H10_4.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.965,
+        0.035
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_96.5-iC4H10_3.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_96.5-C4H10_3.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.97,
+        0.03
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_97-iC4H10_3",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_97.0-C4H10_3.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.975,
+        0.025
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_97.5-iC4H10_2.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_97.5-C4H10_2.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.98,
+        0.02
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_98-iC4H10_2",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_98.0-C4H10_2.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.985,
+        0.015
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_98.5-iC4H10_1.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_98.5-C4H10_1.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.995,
+        0.005
+      ],
+      "labels": [
+        "Xe",
+        "iC4H10"
+      ]
+    },
+    "name": "Xe_99.5-iC4H10_0.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-C4H10/Xe_99.5-C4H10_0.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.8,
+        0.2
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_80-CH4_20",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_80.0-CH4_20.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.805,
+        0.195
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_80.5-CH4_19.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_80.5-CH4_19.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.81,
+        0.19
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_81-CH4_19",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_81.0-CH4_19.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.815,
+        0.185
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_81.5-CH4_18.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_81.5-CH4_18.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.82,
+        0.18
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_82-CH4_18",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_82.0-CH4_18.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.825,
+        0.175
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_82.5-CH4_17.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_82.5-CH4_17.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.83,
+        0.17
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_83-CH4_17",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_83.0-CH4_17.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.835,
+        0.165
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_83.5-CH4_16.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_83.5-CH4_16.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.84,
+        0.16
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_84-CH4_16",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_84.0-CH4_16.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.845,
+        0.155
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_84.5-CH4_15.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_84.5-CH4_15.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.85,
+        0.15
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_85-CH4_15",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_85.0-CH4_15.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.855,
+        0.145
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_85.5-CH4_14.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_85.5-CH4_14.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.86,
+        0.14
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_86-CH4_14",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_86.0-CH4_14.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.865,
+        0.135
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_86.5-CH4_13.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_86.5-CH4_13.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.87,
+        0.13
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_87-CH4_13",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_87.0-CH4_13.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.875,
+        0.125
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_87.5-CH4_12.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_87.5-CH4_12.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.88,
+        0.12
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_88-CH4_12",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_88.0-CH4_12.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.885,
+        0.115
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_88.5-CH4_11.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_88.5-CH4_11.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.89,
+        0.11
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_89-CH4_11",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_89.0-CH4_11.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.895,
+        0.105
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_89.5-CH4_10.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_89.5-CH4_10.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.9,
+        0.1
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_90-CH4_10",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_90.0-CH4_10.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.905,
+        0.095
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_90.5-CH4_9.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_90.5-CH4_9.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.91,
+        0.09
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_91-CH4_9",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_91.0-CH4_9.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.915,
+        0.085
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_91.5-CH4_8.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_91.5-CH4_8.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.92,
+        0.08
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_92-CH4_8",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_92.0-CH4_8.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.925,
+        0.075
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_92.5-CH4_7.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_92.5-CH4_7.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.93,
+        0.07
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_93-CH4_7",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_93.0-CH4_7.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.935,
+        0.065
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_93.5-CH4_6.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_93.5-CH4_6.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.94,
+        0.06
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_94-CH4_6",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_94.0-CH4_6.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.945,
+        0.055
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_94.5-CH4_5.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_94.5-CH4_5.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.95,
+        0.05
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_95-CH4_5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_95.0-CH4_5.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.955,
+        0.045
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_95.5-CH4_4.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_95.5-CH4_4.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.96,
+        0.04
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_96-CH4_4",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_96.0-CH4_4.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.965,
+        0.035
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_96.5-CH4_3.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_96.5-CH4_3.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.97,
+        0.03
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_97-CH4_3",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_97.0-CH4_3.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.975,
+        0.025
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_97.5-CH4_2.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_97.5-CH4_2.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.98,
+        0.02
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_98-CH4_2",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_98.0-CH4_2.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.985,
+        0.015
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_98.5-CH4_1.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_98.5-CH4_1.5.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.99,
+        0.01
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_99-CH4_1",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_99.0-CH4_1.0.gas.json"
+  },
+  {
+    "components": {
+      "fractions": [
+        0.995,
+        0.005
+      ],
+      "labels": [
+        "Xe",
+        "CH4"
+      ]
+    },
+    "name": "Xe_99.5-CH4_0.5",
+    "pressure": 1.0000000002365002,
+    "temperature": 20.0,
+    "url": "https://lobis.github.io/gas-files/public/gas/mixtures/Xe-CH4/Xe_99.5-CH4_0.5.gas.json"
+  }
+]

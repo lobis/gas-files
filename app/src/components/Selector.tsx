@@ -1,6 +1,8 @@
 // GasMixtureSelector.tsx
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import Select from "react-select"
+
+import * as list from "./list.json"
 
 interface GasMixtureSelectorProps {
     onSelect: (gasMixtures: string[]) => void
@@ -19,6 +21,17 @@ interface GasComponent {
 const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
                                                                    onSelect
                                                                }) => {
+
+    const [availableMixtures, setAvailableMixtures] = useState<GasMixture[]>([])
+
+    useEffect(() => {
+        console.log(list)
+        for(let item in list) {
+            console.log(item)
+            // console.log(mixture)
+        }
+    }, []);
+
     const gasMixtures: GasMixture[] = [
         {value: "Ar", label: "Argon (Ar)"},
         {value: "Ne", label: "Neon (Ne)"},
