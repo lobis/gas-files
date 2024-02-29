@@ -198,6 +198,75 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
         setComponents(updatedGasComponents)
     }
 
+    const handleCompositionChange = (target: number, index: number) => {
+        const availableFractions =
+            mixtures.get(selectedMixture)
+        const availableValues = availableFractions?.map(
+            fractions => fractions[index] * 100
+        )
+
+        const updatedGasComponents = [...components]
+        const tentativeWeight =
+            target
+        const oldWeight =
+            updatedGasComponents[index].weight
+
+        // set new weight to the closest available value
+        let newWeight = availableValues?.reduce(
+            (prev, curr) =>
+                Math.abs(curr - tentativeWeight) <
+                Math.abs(prev - tentativeWeight)
+                    ? curr
+                    : prev
+        )
+        if (newWeight === undefined) {
+            newWeight = oldWeight
+        }
+
+        updatedGasComponents[index].weight = newWeight
+
+        // adjust remaining weights to keep sum at 100
+        const sum = updatedGasComponents.reduce(
+            (acc, component) => acc + component.weight,
+            0
+        )
+        if (sum !== 100) {
+            const indexToAdjust =
+                (index + 1) %
+                updatedGasComponents.length
+            updatedGasComponents[
+                indexToAdjust
+                ].weight += 100 - sum
+        }
+
+        setComponents(updatedGasComponents)
+
+        const gasComponents: GasComponent[] = []
+        for (let i = 0; i < updatedGasComponents.length; i++) {
+            gasComponents.push({
+                name: updatedGasComponents[i].name,
+                weight: updatedGasComponents[i].weight
+            })
+        }
+        const key = componentsNamesAndWeightsToKey(gasComponents)
+        const url: string | undefined = dataUrlMap.get(key)
+        if (url !== undefined) {
+            // check if data is already in the map
+            if (!dataMap.has(key)) {
+                const fetchData = async () => {
+                    const result = await axios.get(url)
+                    setDataMap(dataMap.set(key, result.data))
+                    // TODO: if too large, remove some elements
+                }
+                fetchData().then(r => {
+                    onSelect(dataMap.get(key))
+                })
+            } else {
+                onSelect(dataMap.get(key))
+            }
+        }
+    }
+
     return (
         <div
             className="w-full max-w-screen-sm mx-auto my-4 p-4 bg-white rounded-lg shadow-lg flex flex-col items-center">
@@ -229,74 +298,10 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
                             step="1"
                             value={component.weight * 10.0}
                             onChange={event => {
-                                // TODO: unify in a single function
-
-                                const availableFractions =
-                                    mixtures.get(selectedMixture)
-                                const availableValues = availableFractions?.map(
-                                    fractions => fractions[index] * 100
+                                handleCompositionChange(
+                                    parseFloat(event.target.value) / 10.0,
+                                    index
                                 )
-
-                                const updatedGasComponents = [...components]
-                                const tentativeWeight =
-                                    parseInt(event.target.value) / 10.0
-                                const oldWeight =
-                                    updatedGasComponents[index].weight
-
-                                // set new weight to the closest available value
-                                let newWeight = availableValues?.reduce(
-                                    (prev, curr) =>
-                                        Math.abs(curr - tentativeWeight) <
-                                        Math.abs(prev - tentativeWeight)
-                                            ? curr
-                                            : prev
-                                )
-                                if (newWeight === undefined) {
-                                    newWeight = oldWeight
-                                }
-
-                                updatedGasComponents[index].weight = newWeight
-
-                                // adjust remaining weights to keep sum at 100
-                                const sum = updatedGasComponents.reduce(
-                                    (acc, component) => acc + component.weight,
-                                    0
-                                )
-                                if (sum !== 100) {
-                                    const indexToAdjust =
-                                        (index + 1) %
-                                        updatedGasComponents.length
-                                    updatedGasComponents[
-                                        indexToAdjust
-                                        ].weight += 100 - sum
-                                }
-
-                                setComponents(updatedGasComponents)
-
-                                const gasComponents: GasComponent[] = []
-                                for (let i = 0; i < updatedGasComponents.length; i++) {
-                                    gasComponents.push({
-                                        name: updatedGasComponents[i].name,
-                                        weight: updatedGasComponents[i].weight
-                                    })
-                                }
-                                const key = componentsNamesAndWeightsToKey(gasComponents)
-                                const url: string | undefined = dataUrlMap.get(key)
-                                if (url !== undefined) {
-                                    // check if data is already in the map
-                                    if (!dataMap.has(key)) {
-                                        const fetchData = async () => {
-                                            const result = await axios.get(url)
-                                            setDataMap(dataMap.set(key, result.data))
-                                            // TODO: if too large, remove some elements
-                                        }
-                                        fetchData().then(r => {
-                                            onSelect(dataMap.get(key))
-                                        })
-                                    } else {
-                                        onSelect(dataMap.get(key))
-                                    }
-                                }
                             }}
                         />
                         <div className="flex items-center">
@@ -306,79 +311,12 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
                                 min="0"
                                 max="100"
                                 step="0.5"
-                                // round to 2 decimal places
                                 value={component.weight.toFixed(1)}
                                 onChange={event => {
-                                    const availableFractions =
-                                        mixtures.get(selectedMixture)
-                                    const availableValues =
-                                        availableFractions?.map(
-                                            fractions => fractions[index] * 100
-                                        )
-
-                                    const updatedGasComponents = [...components]
-                                    const tentativeWeight = parseFloat(
-                                        event.target.value
+                                    handleCompositionChange(
+                                        parseFloat(event.target.value),
+                                        index
                                     )
-                                    const oldWeight =
-                                        updatedGasComponents[index].weight
-
-                                    // set new weight to the closest available value
-                                    let newWeight = availableValues?.reduce(
-                                        (prev, curr) =>
-                                            Math.abs(curr - tentativeWeight) <
-                                            Math.abs(prev - tentativeWeight)
-                                                ? curr
-                                                : prev
-                                    )
-                                    if (newWeight === undefined) {
-                                        newWeight = oldWeight
-                                    }
-
-                                    updatedGasComponents[index].weight =
-                                        newWeight
-
-                                    // adjust remaining weights to keep sum at 100
-                                    const sum = updatedGasComponents.reduce(
-                                        (acc, component) =>
-                                            acc + component.weight,
-                                        0
-                                    )
-                                    if (sum !== 100) {
-                                        const indexToAdjust =
-                                            (index + 1) %
-                                            updatedGasComponents.length
-                                        updatedGasComponents[
-                                            indexToAdjust
-                                            ].weight += 100 - sum
-                                    }
-
-                                    setComponents(updatedGasComponents)
-
-                                    const gasComponents: GasComponent[] = []
-                                    for (let i = 0; i < updatedGasComponents.length; i++) {
-                                        gasComponents.push({
-                                            name: updatedGasComponents[i].name,
-                                            weight: updatedGasComponents[i].weight
-                                        })
-                                    }
-                                    const key = componentsNamesAndWeightsToKey(gasComponents)
-                                    const url: string | undefined = dataUrlMap.get(key)
-                                    if (url !== undefined) {
-                                        // check if data is already in the map
-                                        if (!dataMap.has(key)) {
-                                            const fetchData = async () => {
-                                                const result = await axios.get(url)
-                                                setDataMap(dataMap.set(key, result.data))
-                                                // TODO: if too large, remove some elements
-                                            }
-                                            fetchData().then(r => {
-                                                onSelect(dataMap.get(key))
-                                            })
-                                        } else {
-                                            onSelect(dataMap.get(key))
-                                        }
-                                    }
                                 }}
                             />
                             <span className="text-gray-600">%</span>
