@@ -8,9 +8,10 @@ interface GasMixtureSelectorProps {
     onSelect: (gasMixtures: string[]) => void
 }
 
-interface MixtureComponent {
+interface MixtureComponentOption {
     value: string
     label: string
+    isDisabled: boolean
 }
 
 interface GasComponent {
@@ -28,7 +29,7 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
                                                                }) => {
 
 
-    const [mixtureComponents, setMixtureComponents] = useState<MixtureComponent[]>([])
+    const [componentNames, setComponentNames] = useState<string[]>([])
     const [mixtures, setMixtures] = useState<Map<string, number[][]>>(new Map())
 
     const componentNameToLabel = (name: string) => {
@@ -58,20 +59,21 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
             }
         }
 
-
-        setMixtureComponents(Array.from(componentNamesFromList).sort().map(name => {
-            return {
-                value: name,
-                label: componentNameToLabel(name)
-            } as MixtureComponent
-        }))
-
+        setComponentNames(Array.from(componentNamesFromList).sort())
         setMixtures(mixturesMap)
-        console.log(mixturesMap)
+        setComponentOptions(
+            Array.from(componentNamesFromList).map(name => ({
+                value: name,
+                label: componentNameToLabel(name),
+                isDisabled: false
+            }))
+        )
     }, [])
 
 
     const [components, setComponents] = useState<GasComponent[]>([])
+    const [componentOptions, setComponentOptions] = useState<MixtureComponentOption[]>([])
+
     const handleGasMixtureChange = (selectedOptions: any) => {
         const selectedMixtures = selectedOptions.map(
             (option: any) => option.value
@@ -96,7 +98,22 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
             }
         })
 
-        // if the sum of all weights it not 100, set the last component to the remaining weight
+        const updatedOptions = [...componentOptions]
+        for (const option of updatedOptions) {
+            const component = option.value
+            if (selectedMixtures.includes(component)) {
+                option.isDisabled = false
+                console.log("skipping", component)
+                continue
+            }
+            const potentialMixture = selectedMixtures.concat(component).sort()
+            const fractions = mixtures.get(selectedMixtures.join(", "))
+            console.log("potentialMixture", potentialMixture, fractions)
+            option.isDisabled = mixtures.get(potentialMixture.join(", ")) === undefined
+        }
+        setComponentOptions(updatedOptions)
+
+        // if the sum of all weights is not 100, set the last component to the remaining weight
         const sum = updatedGasComponents.reduce(
             (acc, component) => acc + component.weight,
             0
@@ -107,16 +124,14 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
         }
 
         setComponents(updatedGasComponents)
-        console.log(updatedGasComponents)
     }
 
     return (
         <div
             className="w-full max-w-screen-sm mx-auto my-4 p-4 bg-gray-100 rounded-lg shadow-lg flex flex-col items-center">
             <Select className={"w-full mb-4"}
-                    defaultValue={[mixtureComponents[0]]}
                     isMulti
-                    options={mixtureComponents}
+                    options={componentOptions}
                     onChange={handleGasMixtureChange}
             />
             <div className="flex">
