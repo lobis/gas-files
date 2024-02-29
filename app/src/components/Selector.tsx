@@ -249,6 +249,32 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
                                 }
 
                                 setComponents(updatedGasComponents)
+
+                                const gasComponents: GasComponent[] = []
+                                for (let i = 0; i < updatedGasComponents.length; i++) {
+                                    gasComponents.push({
+                                        name: updatedGasComponents[i].name,
+                                        weight: updatedGasComponents[i].weight
+                                    })
+                                }
+                                const key = componentsNamesAndWeightsToKey(gasComponents)
+                                const url: string | undefined = dataUrlMap.get(key)
+                                if (url !== undefined) {
+                                    // check if data is already in the map
+                                    if (!dataMap.has(key)) {
+                                        const fetchData = async () => {
+                                            const result = await axios.get(url)
+                                            setDataMap(dataMap.set(key, result.data))
+                                            // TODO: if too large, remove some elements
+                                        }
+                                        fetchData().then(r => {
+                                            console.log("Fetched data for: ", key)
+                                            onSelect(dataMap.get(key))
+                                        })
+                                    } else {
+                                        onSelect(dataMap.get(key))
+                                    }
+                                }
                             }}
                         />
                         <div className="flex items-center">
@@ -316,7 +342,6 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
                                     }
                                     const key = componentsNamesAndWeightsToKey(gasComponents)
                                     const url: string | undefined = dataUrlMap.get(key)
-                                    console.log("URL: ", url)
                                     if (url !== undefined) {
                                         // check if data is already in the map
                                         if (!dataMap.has(key)) {
@@ -329,6 +354,8 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
                                                 console.log("Fetched data for: ", key)
                                                 onSelect(dataMap.get(key))
                                             })
+                                        } else {
+                                            onSelect(dataMap.get(key))
                                         }
                                     }
                                 }}
