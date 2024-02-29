@@ -2,9 +2,10 @@
 import React, {useState, useEffect} from "react"
 import Select from "react-select"
 import axios from 'axios';
+import {Data} from "../App";
 
 interface GasMixtureSelectorProps {
-    onSelect: (gasMixtures: string[]) => void
+    onSelect: (data: Data) => void
 }
 
 interface MixtureComponentOption {
@@ -18,6 +19,17 @@ interface GasComponent {
     weight: number // 0-100 %
 }
 
+const componentNamesToKeys = (names: string[]) => {
+    return names.sort().join(", ")
+}
+
+const componentsNamesAndWeightsToKey = (components: GasComponent[]) => {
+    return components
+        .sort((a, b) => a.name.localeCompare(b.name))
+        .map(component => `${component.name} ${component.weight.toFixed(1)}`)
+        .join(", ")
+}
+
 const GasMixtureTitle = ({mixture}: { mixture: GasComponent[] }) => {
     // if empty, return "Select a Gas Mixture", otherwise return the mixture with %
     if (mixture.length === 0) {
@@ -27,9 +39,9 @@ const GasMixtureTitle = ({mixture}: { mixture: GasComponent[] }) => {
             </h1>
         )
     }
-    const mixtureString = mixture
+    const mixtureString = componentNamesToKeys(mixture
         .map(component => `${component.weight.toFixed(1)}% ${component.name}`)
-        .join(" + ")
+    )
 
     return <h1 className="text-2xl font-semibold mb-4">{mixtureString}</h1>
 }
@@ -48,10 +60,13 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
         }
     }
 
+    const [dataUrlMap, setDataUrlMap] = useState<Map<string, string>>(new Map())
+    const [dataMap, setDataMap] = useState<Map<string, any>>(new Map())
     useEffect(() => {
         const initialUpdate = async () => {
             const componentNamesFromList = new Set<string>()
             const mixturesMap: Map<string, number[][]> = new Map()
+            const dataUrlMap: Map<string, string> = new Map()
             const list = await axios.get("gas/list.json")
             const data = list.data
             for (const mixture of data) {
@@ -61,14 +76,24 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
                     componentNamesFromList.add(label)
                 }
                 // add the composition to the map
-                const mapKey = labels.join(", ")
+                const mapKey = componentNamesToKeys(labels)
                 // check if key is already in the map
                 if (!mixturesMap.has(mapKey)) {
                     mixturesMap.set(mapKey, [mixture.components.fractions])
                 } else {
                     mixturesMap.get(mapKey)?.push(mixture.components.fractions)
                 }
+
+                const gasComponents: GasComponent[] = []
+                for (let i = 0; i < labels.length; i++) {
+                    gasComponents.push({name: labels[i], weight: mixture.components.fractions[i] * 100})
+                }
+
+                const key = componentsNamesAndWeightsToKey(gasComponents)
+                dataUrlMap.set(key, mixture.url)
             }
+
+            setDataUrlMap(dataUrlMap)
 
             setMixtures(mixturesMap)
             setComponentOptions(
@@ -127,12 +152,12 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
             }
             const potentialMixture = selectedMixtures.concat(component).sort()
             option.isDisabled =
-                mixtures.get(potentialMixture.join(", ")) === undefined
+                mixtures.get(componentNamesToKeys(potentialMixture)) === undefined
         }
         // TODO: this currently works but may not work in all cases: If we have "Ar" and "Ar + CH4 + C4H10" but not "Ar + CH4" or "Ar + C4H10", then the chain is broken at some point
         setComponentOptions(updatedOptions)
 
-        const mixtureName = selectedMixtures.join(", ")
+        const mixtureName = componentNamesToKeys(selectedMixtures)
         setSelectedMixture(mixtureName)
         const availableFractions = mixtures.get(mixtureName)
 
@@ -152,7 +177,7 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
 
     return (
         <div
-            className="w-full max-w-screen-sm mx-auto my-4 p-4 bg-gray-100 rounded-lg shadow-lg flex flex-col items-center">
+            className="w-full max-w-screen-sm mx-auto my-4 p-4 bg-white rounded-lg shadow-lg flex flex-col items-center">
             <GasMixtureTitle mixture={components}/>
             <Select
                 className={"w-full mb-4"}
@@ -281,6 +306,31 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
                                     }
 
                                     setComponents(updatedGasComponents)
+
+                                    const gasComponents: GasComponent[] = []
+                                    for (let i = 0; i < updatedGasComponents.length; i++) {
+                                        gasComponents.push({
+                                            name: updatedGasComponents[i].name,
+                                            weight: updatedGasComponents[i].weight
+                                        })
+                                    }
+                                    const key = componentsNamesAndWeightsToKey(gasComponents)
+                                    const url: string | undefined = dataUrlMap.get(key)
+                                    console.log("URL: ", url)
+                                    if (url !== undefined) {
+                                        // check if data is already in the map
+                                        if (!dataMap.has(key)) {
+                                            const fetchData = async () => {
+                                                const result = await axios.get(url)
+                                                setDataMap(dataMap.set(key, result.data))
+                                                // TODO: if too large, remove some elements
+                                            }
+                                            fetchData().then(r => {
+                                                console.log("Fetched data for: ", key)
+                                                onSelect(dataMap.get(key))
+                                            })
+                                        }
+                                    }
                                 }}
                             />
                             <span className="text-gray-600">%</span>

@@ -10,34 +10,81 @@ import {
     Legend
 } from "recharts"
 
+import {Data} from "../App"
+
 interface GraphProps {
-    gasMixture: string
+    data: Data
 }
 
-const Graph: React.FC<GraphProps> = ({ gasMixture }) => {
-    // Fetch data for the selected gas mixture from your API or mock data
+const Graph: React.FC<GraphProps> = ({data}) => {
 
-    // Mock data for demonstration
-    const data = [
-        { name: "Jan", value: 30 },
-        { name: "Feb", value: 40 },
-        { name: "Mar", value: 35 }
-        // Add more data points as needed
-    ]
+    const graphData = data.electric_field.map((value, index) => {
+            return {
+                x: value,
+                electron_drift_velocity: data.electron_drift_velocity[index],
+                electron_longitudinal_diffusion: data.electron_longitudinal_diffusion[index],
+                electron_transversal_diffusion: data.electron_transversal_diffusion[index],
+                electron_townsend: data.electron_townsend[index]
+            }
+        }
+    )
 
     return (
-        <div>
-            <h2>Graph for {gasMixture}</h2>
-            <LineChart width={800} height={400} data={data}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Line type="monotone" dataKey="value" stroke="#8884d8" />
-            </LineChart>
+        <div
+            className="graph w-full max-w-screen-lg bg-white mx-auto my-4 p-4 rounded-lg shadow-lg flex flex-col items-center">
+
+            <h2 className="text-lg font-bold mb-4">Graph for {data.name}</h2>
+            <div className="overflow-x-auto">
+                <LineChart
+                    width={800}
+                    height={400}
+                    data={graphData}
+                    margin={{top: 20, right: 30, left: 20, bottom: 20}}
+                >
+                    <CartesianGrid strokeDasharray="3 3"/>
+
+                    <XAxis
+                        allowDataOverflow
+                        dataKey="x"
+                        label={{
+                            value: "Electric Field / Pressure [V/cm/bar]",
+                            offset: -10,
+                            position: "insideBottom",
+                            className: "text-sm"
+                        }}
+                        domain={[
+                            Math.round(Math.min(...graphData.map((entry) => entry.x))),
+                            Math.round(Math.max(...graphData.map((entry) => entry.x)))
+                        ]}
+                        type="number"
+                    />
+
+                    <YAxis
+                        allowDataOverflow
+                        label={{
+                            value: "Drift Velocity",
+                            angle: -90,
+                            position: "insideLeft",
+                            offset: 5,
+                            className: "text-sm"
+                        }}
+                        type="number"
+                    />
+
+                    <Tooltip/>
+
+                    <Line
+                        type="linear"
+                        dataKey="electron_drift_velocity"
+                        stroke="#4F46E5"
+                        strokeWidth={2}
+                        dot={false}
+                    />
+                </LineChart>
+            </div>
         </div>
-    )
+    );
+
 }
 
 export default Graph
