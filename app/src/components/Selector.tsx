@@ -234,7 +234,6 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
         }
         const key = componentsNamesAndWeightsToKey(gasComponents)
         const url: string | undefined = dataUrlMap.get(key)
-        console.log(url)
         if (url !== undefined) {
             // check if data is already in the map
             if (!dataMap.has(key)) {
