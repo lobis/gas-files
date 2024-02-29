@@ -56,8 +56,6 @@ const Graph: React.FC<GraphProps> = ({data}) => {
     return (
         <div
             className="graph w-full max-w-screen-lg bg-white mx-auto my-4 p-4 rounded-lg shadow-lg flex flex-col items-center">
-
-            <h2 className="text-lg font-bold mb-4">Graph for {data.name}</h2>
             <div>
                 <ToggleButtonGroup
                     color="primary"
