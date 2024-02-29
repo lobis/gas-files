@@ -111,7 +111,7 @@ const Graph: React.FC<GraphProps> = ({ data }) => {
                             label={{
                                 value: {
                                     electron_drift_velocity:
-                                        "Drift Velocity [cm/s]",
+                                        "Drift Velocity [cm/μs]",
                                     electron_longitudinal_diffusion:
                                         "Longitudinal Diffusion [√cm]",
                                     electron_transversal_diffusion:
