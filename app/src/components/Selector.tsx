@@ -29,7 +29,6 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
                                                                }) => {
 
 
-    const [componentNames, setComponentNames] = useState<string[]>([])
     const [mixtures, setMixtures] = useState<Map<string, number[][]>>(new Map())
 
     const componentNameToLabel = (name: string) => {
@@ -59,7 +58,6 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
             }
         }
 
-        setComponentNames(Array.from(componentNamesFromList).sort())
         setMixtures(mixturesMap)
         setComponentOptions(
             Array.from(componentNamesFromList).map(name => ({
@@ -103,16 +101,17 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
             const component = option.value
             if (selectedMixtures.includes(component)) {
                 option.isDisabled = false
-                console.log("skipping", component)
                 continue
             }
             const potentialMixture = selectedMixtures.concat(component).sort()
             const fractions = mixtures.get(selectedMixtures.join(", "))
-            console.log("potentialMixture", potentialMixture, fractions)
             option.isDisabled = mixtures.get(potentialMixture.join(", ")) === undefined
         }
+        // TODO: this currently works but may not work in all cases: If we have "Ar" and "Ar + CH4 + C4H10" but not "Ar + CH4" or "Ar + C4H10", then the chain is broken at some point
         setComponentOptions(updatedOptions)
 
+        const availableFractions = mixtures.get(selectedMixtures.join(", "))
+        console.log(availableFractions)
         // if the sum of all weights is not 100, set the last component to the remaining weight
         const sum = updatedGasComponents.reduce(
             (acc, component) => acc + component.weight,
@@ -129,6 +128,7 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
     return (
         <div
             className="w-full max-w-screen-sm mx-auto my-4 p-4 bg-gray-100 rounded-lg shadow-lg flex flex-col items-center">
+            <h1 className="text-2xl font-semibold mb-4">Gas Mixture Selector</h1>
             <Select className={"w-full mb-4"}
                     isMulti
                     options={componentOptions}
@@ -136,27 +136,42 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
             />
             <div className="flex">
                 {components.map((component, index) => (
-                    <div key={index} className="m-4">
-                        <label className="block font-semibold whitespace-no-wrap">
+                    <div key={index} className="m-4 flex flex-col items-center">
+                        <label className="m-2 block font-semibold whitespace-no-wrap">
                             {component.name}
                         </label>
                         <input
+                            className={"m-2 w-64"}
                             type="range"
                             min="0"
-                            max="100"
-                            value={component.weight}
+                            max="1000"
+                            step="1"
+                            value={component.weight * 10.0}
                             onChange={event => {
                                 const updatedGasComponents = [...components]
-                                const newWeight = parseInt(event.target.value)
+                                const newWeight = parseInt(event.target.value) / 10.0
                                 const oldWeight = updatedGasComponents[index].weight
                                 updatedGasComponents[index].weight = newWeight
-                                // update the weight of the remaining components (starting with the next one) so the sum is 100. Weights cannot be negative!
-                                // TODO
-
                                 setComponents(updatedGasComponents)
                             }}
                         />
-                        <span className="block text-sm">{component.weight}%</span>
+                        <div className="flex items-center">
+                            <input
+                                className="m-2 w-16 text-right bg-transparent border-none focus:outline-none"
+                                type="number"
+                                min="0"
+                                max="100"
+                                step="0.5"
+                                value={component.weight}
+                                onChange={event => {
+                                    const updatedGasComponents = [...components]
+                                    const newWeight = parseFloat(event.target.value)
+                                    updatedGasComponents[index].weight = newWeight
+                                    setComponents(updatedGasComponents)
+                                }}
+                            />
+                            <span className="text-gray-600">%</span>
+                        </div>
                     </div>
                 ))}
             </div>

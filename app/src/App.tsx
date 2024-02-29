@@ -12,7 +12,6 @@ const App: React.FC = () => {
 
     return (
         <div>
-            <h1>Gas Mixture Graph Plotter</h1>
             <GasMixtureSelector onSelect={handleGasMixtureChange} />
             {selectedGasMixture && <Graph gasMixture={selectedGasMixture} />}
         </div>
