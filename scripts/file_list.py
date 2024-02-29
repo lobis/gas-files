@@ -14,7 +14,7 @@ def parse_gas_json(path: Path) -> dict:
             name=data["name"],
             pressure=data["pressure"],
             temperature=data["temperature"],
-            url=f"""https://lobis.github.io/gas-files/{path.as_posix()}"""
+            url=f"/{path.as_posix()}".lstrip("/public")
         )
 
 
