@@ -1,5 +1,4 @@
-// Graph.tsx
-import React, {useState} from "react"
+import React, { useState } from "react"
 import {
     LineChart,
     Line,
@@ -7,78 +6,92 @@ import {
     YAxis,
     CartesianGrid,
     Tooltip,
-    Legend, ResponsiveContainer
+    ResponsiveContainer
 } from "recharts"
 
-import ToggleButton from '@mui/material/ToggleButton';
-import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
+import ToggleButton from "@mui/material/ToggleButton"
+import ToggleButtonGroup from "@mui/material/ToggleButtonGroup"
 
-import {Data} from "../App"
-import {Box, Slider} from "@mui/material";
+import { Data } from "../App"
+import { Box, Slider } from "@mui/material"
 
 interface GraphProps {
     data: Data
 }
 
-const Graph: React.FC<GraphProps> = ({data}) => {
-
+const Graph: React.FC<GraphProps> = ({ data }) => {
     const graphData = data.electric_field.map((value, index) => {
-            return {
-                x: value,
-                electron_drift_velocity: data.electron_drift_velocity[index],
-                electron_longitudinal_diffusion: data.electron_longitudinal_diffusion[index],
-                electron_transversal_diffusion: data.electron_transversal_diffusion[index],
-                electron_townsend: data.electron_townsend[index]
-            }
+        return {
+            x: value,
+            electron_drift_velocity: data.electron_drift_velocity[index],
+            electron_longitudinal_diffusion:
+                data.electron_longitudinal_diffusion[index],
+            electron_transversal_diffusion:
+                data.electron_transversal_diffusion[index],
+            electron_townsend: data.electron_townsend[index]
         }
-    )
+    })
 
-    const [magnitudeToGraph, setMagnitudeToGraph] = useState("electron_drift_velocity");
-    const [xAxisRange, setXAxisRange] = useState([0, 2000]);
+    const [magnitudeToGraph, setMagnitudeToGraph] = useState(
+        "electron_drift_velocity"
+    )
+    const [xAxisRange, setXAxisRange] = useState([0, 2000])
     const handleChangeToMagnitudeToGraph = (
         event: React.MouseEvent<HTMLElement>,
-        newMagnitudeToGraph: string,
+        newMagnitudeToGraph: string
     ) => {
         if (newMagnitudeToGraph === null) {
-            return;
+            return
         }
-        setMagnitudeToGraph(newMagnitudeToGraph);
-    };
+        setMagnitudeToGraph(newMagnitudeToGraph)
+    }
 
-    const handleRangeSliderChange = (event: Event, newValue: number | number[]) => {
-        const minDistance = 500;
-        if ((newValue as number[])[1] - (newValue as number[])[0] < minDistance) {
-            return;
+    const handleRangeSliderChange = (
+        event: Event,
+        newValue: number | number[]
+    ) => {
+        const minDistance = 500
+        if (
+            (newValue as number[])[1] - (newValue as number[])[0] <
+            minDistance
+        ) {
+            return
         }
-        setXAxisRange(newValue as number[]);
-    };
+        setXAxisRange(newValue as number[])
+    }
 
     return (
-        <div
-            className="graph w-full max-w-screen-lg bg-white mx-auto my-4 p-4 rounded-lg shadow-lg flex flex-col items-center">
+        <div className="graph w-full max-w-screen-lg bg-white mx-auto my-4 p-4 rounded-lg shadow-lg flex flex-col items-center">
             <div>
                 <ToggleButtonGroup
-                    color="primary"
+                    color="standard"
                     value={magnitudeToGraph}
                     exclusive
-                    onChange={handleChangeToMagnitudeToGraph}
-                >
-                    <ToggleButton value="electron_drift_velocity">Drift Velocity</ToggleButton>
-                    <ToggleButton value="electron_longitudinal_diffusion">Longitudinal Diffusion</ToggleButton>
-                    <ToggleButton value="electron_transversal_diffusion">Transversal Diffusion</ToggleButton>
-                    <ToggleButton value="electron_townsend">Townsend Coefficient</ToggleButton>
+                    onChange={handleChangeToMagnitudeToGraph}>
+                    <ToggleButton
+                        className={"patata"}
+                        value="electron_drift_velocity">
+                        Drift Velocity
+                    </ToggleButton>
+                    <ToggleButton value="electron_longitudinal_diffusion">
+                        Longitudinal Diffusion
+                    </ToggleButton>
+                    <ToggleButton value="electron_transversal_diffusion">
+                        Transversal Diffusion
+                    </ToggleButton>
+                    <ToggleButton value="electron_townsend">
+                        Townsend Coefficient
+                    </ToggleButton>
                 </ToggleButtonGroup>
-
             </div>
-            <div className="w-full" style={{height: 500}}>
+            <div className="w-full" style={{ height: 450 }}>
                 <ResponsiveContainer width={"100%"}>
                     <LineChart
                         width={800}
                         height={400}
                         data={graphData}
-                        margin={{top: 20, right: 30, left: 20, bottom: 20}}
-                    >
-                        <CartesianGrid/>
+                        margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
+                        <CartesianGrid />
 
                         <XAxis
                             allowDataOverflow
@@ -97,10 +110,14 @@ const Graph: React.FC<GraphProps> = ({data}) => {
                             allowDataOverflow
                             label={{
                                 value: {
-                                    "electron_drift_velocity": "Drift Velocity [cm/s]",
-                                    "electron_longitudinal_diffusion": "Longitudinal Diffusion [√cm]",
-                                    "electron_transversal_diffusion": "Transversal Diffusion [√cm]",
-                                    "electron_townsend": "Townsend Coefficient [1/cm]"
+                                    electron_drift_velocity:
+                                        "Drift Velocity [cm/s]",
+                                    electron_longitudinal_diffusion:
+                                        "Longitudinal Diffusion [√cm]",
+                                    electron_transversal_diffusion:
+                                        "Transversal Diffusion [√cm]",
+                                    electron_townsend:
+                                        "Townsend Coefficient [1/cm]"
                                 }[magnitudeToGraph],
                                 angle: -90,
                                 position: "insideLeft",
@@ -110,7 +127,7 @@ const Graph: React.FC<GraphProps> = ({data}) => {
                             type="number"
                         />
 
-                        <Tooltip/>
+                        <Tooltip />
 
                         <Line
                             type="natural"
@@ -126,7 +143,7 @@ const Graph: React.FC<GraphProps> = ({data}) => {
             <div className={"w-full"}>
                 <Box className={"w-full"}>
                     <Slider
-                        getAriaLabel={() => 'Temperature range'}
+                        getAriaLabel={() => "Temperature range"}
                         value={xAxisRange}
                         onChange={handleRangeSliderChange}
                         valueLabelDisplay="auto"
@@ -138,7 +155,7 @@ const Graph: React.FC<GraphProps> = ({data}) => {
                 </Box>
             </div>
         </div>
-    );
+    )
 }
 
 export default Graph

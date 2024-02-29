@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import GasMixtureSelector from "./components/Selector"
 import Graph from "./components/Graph"
-import {Interface} from "node:readline";
+import {Interface} from "node:readline"
 
 export interface Data {
     name: string
@@ -16,9 +16,9 @@ export interface Data {
 }
 
 const App: React.FC = () => {
-    const [data, setData] = useState<any>(null)
+    const [data, setData] = useState<Data | null>(null)
 
-    const handleGasMixtureChange = (data: Data) => {
+    const handleGasMixtureChange = (data: Data | null) => {
         setData(data)
     }
 

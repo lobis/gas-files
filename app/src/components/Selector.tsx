@@ -1,11 +1,10 @@
-// GasMixtureSelector.tsx
 import React, {useState, useEffect} from "react"
 import Select from "react-select"
-import axios from 'axios';
-import {Data} from "../App";
+import axios from "axios"
+import {Data} from "../App"
 
 interface GasMixtureSelectorProps {
-    onSelect: (data: Data) => void
+    onSelect: (data: Data | null) => void
 }
 
 interface MixtureComponentOption {
@@ -31,8 +30,8 @@ const componentsNamesAndWeightsToKey = (components: GasComponent[]) => {
 }
 
 interface GasMixtureTitleProps {
-    mixture: GasComponent[];
-    dataUrlMap: Map<string, string>;
+    mixture: GasComponent[]
+    dataUrlMap: Map<string, string>
 }
 
 const GasMixtureTitle = ({mixture, dataUrlMap}: GasMixtureTitleProps) => {
@@ -44,8 +43,10 @@ const GasMixtureTitle = ({mixture, dataUrlMap}: GasMixtureTitleProps) => {
             </h1>
         )
     }
-    const mixtureString = componentNamesToKeys(mixture
-        .map(component => `${component.weight.toFixed(1)}% ${component.name}`)
+    const mixtureString = componentNamesToKeys(
+        mixture.map(
+            component => `${component.weight.toFixed(1)}% ${component.name}`
+        )
     )
 
     const gasComponents: GasComponent[] = []
@@ -60,13 +61,23 @@ const GasMixtureTitle = ({mixture, dataUrlMap}: GasMixtureTitleProps) => {
     // remove the last .json
     const urlGasFile: string | undefined = urlJson?.slice(0, -5)
 
-    return (<div className="flex flex-col items-center">
-        <h1 className="text-2xl font-semibold">{mixtureString}</h1>
-        <div className="flex text-lg">
-            {urlGasFile && <a href={urlGasFile} target="_blank" className="m-2">Gas File</a>}
-            {urlJson && <a href={urlJson} target="_blank" className="m-2">JSON</a>}
+    return (
+        <div className="flex flex-col items-center">
+            <h1 className="text-2xl font-semibold">{mixtureString}</h1>
+            <div className="flex text-lg">
+                {urlGasFile && (
+                    <a href={urlGasFile} target="_blank" className="m-2">
+                        Gas File
+                    </a>
+                )}
+                {urlJson && (
+                    <a href={urlJson} target="_blank" className="m-2">
+                        JSON
+                    </a>
+                )}
+            </div>
         </div>
-    </div>)
+    )
 }
 
 const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
@@ -109,7 +120,10 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
 
                 const gasComponents: GasComponent[] = []
                 for (let i = 0; i < labels.length; i++) {
-                    gasComponents.push({name: labels[i], weight: mixture.components.fractions[i] * 100})
+                    gasComponents.push({
+                        name: labels[i],
+                        weight: mixture.components.fractions[i] * 100
+                    })
                 }
 
                 const key = componentsNamesAndWeightsToKey(gasComponents)
@@ -131,7 +145,6 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
         }
 
         initialUpdate().then(r => {
-            //
         })
     }, [])
 
@@ -139,6 +152,18 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
     const [componentOptions, setComponentOptions] = useState<
         MixtureComponentOption[]
     >([])
+
+    const [firstRender, setFirstRender] = useState(true)
+    useEffect(() => {
+        if (!firstRender) {
+            return
+        }
+        if (componentOptions.length === 0) {
+            return
+        }
+        handleGasMixtureChange([])
+        setFirstRender(false)
+    }, [componentOptions, firstRender])
 
     const handleGasMixtureChange = (selectedOptions: any) => {
         const selectedMixtures = selectedOptions.map(
@@ -175,7 +200,8 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
             }
             const potentialMixture = selectedMixtures.concat(component).sort()
             option.isDisabled =
-                mixtures.get(componentNamesToKeys(potentialMixture)) === undefined
+                mixtures.get(componentNamesToKeys(potentialMixture)) ===
+                undefined
         }
         // TODO: this currently works but may not work in all cases: If we have "Ar" and "Ar + CH4 + C4H10" but not "Ar + CH4" or "Ar + C4H10", then the chain is broken at some point
         setComponentOptions(updatedOptions)
@@ -199,7 +225,6 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
     }
 
     useEffect(() => {
-
         const gasComponents: GasComponent[] = []
         for (let i = 0; i < components.length; i++) {
             gasComponents.push({
@@ -209,6 +234,7 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
         }
         const key = componentsNamesAndWeightsToKey(gasComponents)
         const url: string | undefined = dataUrlMap.get(key)
+        console.log(url)
         if (url !== undefined) {
             // check if data is already in the map
             if (!dataMap.has(key)) {
@@ -223,29 +249,26 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
             } else {
                 onSelect(dataMap.get(key))
             }
+        } else {
+            onSelect(null)
         }
-    }, [components]);
+    }, [components])
 
     const handleCompositionChange = (target: number, index: number) => {
-        const availableFractions =
-            mixtures.get(selectedMixture)
+        const availableFractions = mixtures.get(selectedMixture)
         const availableValues = availableFractions?.map(
             fractions => fractions[index] * 100
         )
 
         const updatedGasComponents = [...components]
-        const tentativeWeight =
-            target
-        const oldWeight =
-            updatedGasComponents[index].weight
+        const tentativeWeight = target
+        const oldWeight = updatedGasComponents[index].weight
 
         // set new weight to the closest available value
-        let newWeight = availableValues?.reduce(
-            (prev, curr) =>
-                Math.abs(curr - tentativeWeight) <
-                Math.abs(prev - tentativeWeight)
-                    ? curr
-                    : prev
+        let newWeight = availableValues?.reduce((prev, curr) =>
+            Math.abs(curr - tentativeWeight) < Math.abs(prev - tentativeWeight)
+                ? curr
+                : prev
         )
         if (newWeight === undefined) {
             newWeight = oldWeight
@@ -259,12 +282,8 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
             0
         )
         if (sum !== 100) {
-            const indexToAdjust =
-                (index + 1) %
-                updatedGasComponents.length
-            updatedGasComponents[
-                indexToAdjust
-                ].weight += 100 - sum
+            const indexToAdjust = (index + 1) % updatedGasComponents.length
+            updatedGasComponents[indexToAdjust].weight += 100 - sum
         }
 
         setComponents(updatedGasComponents)
