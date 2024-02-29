@@ -138,7 +138,7 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
         )
         if (sum !== 100 && updatedGasComponents.length > 0) {
             const lastComponentIndex = updatedGasComponents.length - 1
-            updatedGasComponents[lastComponentIndex].weight = 100 - sum
+            updatedGasComponents[lastComponentIndex].weight += 100 - sum
         }
 
         updatedGasComponents.sort((a, b) => a.name.localeCompare(b.name))
