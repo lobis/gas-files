@@ -198,6 +198,34 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
         setComponents(updatedGasComponents)
     }
 
+    useEffect(() => {
+
+        const gasComponents: GasComponent[] = []
+        for (let i = 0; i < components.length; i++) {
+            gasComponents.push({
+                name: components[i].name,
+                weight: components[i].weight
+            })
+        }
+        const key = componentsNamesAndWeightsToKey(gasComponents)
+        const url: string | undefined = dataUrlMap.get(key)
+        if (url !== undefined) {
+            // check if data is already in the map
+            if (!dataMap.has(key)) {
+                const fetchData = async () => {
+                    const result = await axios.get(url)
+                    setDataMap(dataMap.set(key, result.data))
+                    // TODO: if too large, remove some elements
+                }
+                fetchData().then(r => {
+                    onSelect(dataMap.get(key))
+                })
+            } else {
+                onSelect(dataMap.get(key))
+            }
+        }
+    }, [components]);
+
     const handleCompositionChange = (target: number, index: number) => {
         const availableFractions =
             mixtures.get(selectedMixture)
@@ -240,31 +268,6 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
         }
 
         setComponents(updatedGasComponents)
-
-        const gasComponents: GasComponent[] = []
-        for (let i = 0; i < updatedGasComponents.length; i++) {
-            gasComponents.push({
-                name: updatedGasComponents[i].name,
-                weight: updatedGasComponents[i].weight
-            })
-        }
-        const key = componentsNamesAndWeightsToKey(gasComponents)
-        const url: string | undefined = dataUrlMap.get(key)
-        if (url !== undefined) {
-            // check if data is already in the map
-            if (!dataMap.has(key)) {
-                const fetchData = async () => {
-                    const result = await axios.get(url)
-                    setDataMap(dataMap.set(key, result.data))
-                    // TODO: if too large, remove some elements
-                }
-                fetchData().then(r => {
-                    onSelect(dataMap.get(key))
-                })
-            } else {
-                onSelect(dataMap.get(key))
-            }
-        }
     }
 
     return (
