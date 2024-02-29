@@ -14,6 +14,7 @@ import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 
 import {Data} from "../App"
+import {Box, Slider} from "@mui/material";
 
 interface GraphProps {
     data: Data
@@ -33,7 +34,7 @@ const Graph: React.FC<GraphProps> = ({data}) => {
     )
 
     const [magnitudeToGraph, setMagnitudeToGraph] = useState("electron_drift_velocity");
-
+    const [xAxisRange, setXAxisRange] = useState([0, 2000]);
     const handleChangeToMagnitudeToGraph = (
         event: React.MouseEvent<HTMLElement>,
         newMagnitudeToGraph: string,
@@ -42,6 +43,14 @@ const Graph: React.FC<GraphProps> = ({data}) => {
             return;
         }
         setMagnitudeToGraph(newMagnitudeToGraph);
+    };
+
+    const handleRangeSliderChange = (event: Event, newValue: number | number[]) => {
+        const minDistance = 500;
+        if ((newValue as number[])[1] - (newValue as number[])[0] < minDistance) {
+            return;
+        }
+        setXAxisRange(newValue as number[]);
     };
 
     return (
@@ -82,10 +91,7 @@ const Graph: React.FC<GraphProps> = ({data}) => {
                                 position: "insideBottom",
                                 className: "text-sm"
                             }}
-                            domain={[
-                                Math.round(Math.min(...graphData.map((entry) => entry.x))),
-                                Math.round(Math.max(...graphData.map((entry) => entry.x)))
-                            ]}
+                            domain={xAxisRange}
                             type="number"
                         />
 
@@ -94,8 +100,8 @@ const Graph: React.FC<GraphProps> = ({data}) => {
                             label={{
                                 value: {
                                     "electron_drift_velocity": "Drift Velocity [cm/s]",
-                                    "electron_longitudinal_diffusion": "Longitudinal Diffusion [cm²/s]",
-                                    "electron_transversal_diffusion": "Transversal Diffusion [cm²/s]",
+                                    "electron_longitudinal_diffusion": "Longitudinal Diffusion [√cm]",
+                                    "electron_transversal_diffusion": "Transversal Diffusion [√cm]",
                                     "electron_townsend": "Townsend Coefficient [1/cm]"
                                 }[magnitudeToGraph],
                                 angle: -90,
@@ -118,9 +124,23 @@ const Graph: React.FC<GraphProps> = ({data}) => {
                     </LineChart>
                 </ResponsiveContainer>
             </div>
+
+            <div className={"w-full"}>
+                <Box className={"w-full"}>
+                    <Slider
+                        getAriaLabel={() => 'Temperature range'}
+                        value={xAxisRange}
+                        onChange={handleRangeSliderChange}
+                        valueLabelDisplay="auto"
+                        min={0}
+                        max={10000}
+                        step={100}
+                        disableSwap={true}
+                    />
+                </Box>
+            </div>
         </div>
     );
-
 }
 
 export default Graph
