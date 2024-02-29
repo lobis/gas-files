@@ -78,7 +78,7 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
 
         setMixtures(mixturesMap)
         setComponentOptions(
-            Array.from(componentNamesFromList).map(name => ({
+            Array.from(componentNamesFromList).sort().map(name => ({
                 value: name,
                 label: componentNameToLabel(name),
                 isDisabled: false
@@ -94,6 +94,7 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
         const selectedMixtures = selectedOptions.map(
             (option: any) => option.value
         )
+        selectedMixtures.sort()
 
         // Create a new array instead of mutating the existing one
         let updatedGasComponents: GasComponent[] = [...components]
@@ -130,7 +131,6 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
         const mixtureName = selectedMixtures.join(", ")
         setSelectedMixture(mixtureName)
         const availableFractions = mixtures.get(mixtureName)
-        console.log(availableFractions)
         // if the sum of all weights is not 100, set the last component to the remaining weight
         const sum = updatedGasComponents.reduce(
             (acc, component) => acc + component.weight,
@@ -141,6 +141,7 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
             updatedGasComponents[lastComponentIndex].weight = 100 - sum
         }
 
+        updatedGasComponents.sort((a, b) => a.name.localeCompare(b.name))
         setComponents(updatedGasComponents)
     }
 
@@ -152,6 +153,9 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
                     isMulti
                     options={componentOptions}
                     onChange={handleGasMixtureChange}
+                    value={componentOptions.filter(option =>
+                        components.map(component => component.name).includes(option.value)
+                    )}
             />
             <div className="flex">
                 {components.map((component, index) => (
@@ -160,7 +164,7 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
                             {component.name}
                         </label>
                         <input
-                            className={"m-2 w-64"}
+                            className={"m-2 w-64 appearance-auto bg-gray-300 h-2 rounded-lg"}
                             type="range"
                             min="0"
                             max="1000"
