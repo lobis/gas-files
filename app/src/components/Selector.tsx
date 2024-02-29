@@ -24,6 +24,23 @@ interface Mixture {
     composition: number[]
 }
 
+const GasMixtureTitle = ({ mixture }: { mixture: GasComponent[] }) => {
+    // if empty, return "Select a Gas Mixture", otherwise return the mixture with %
+    if (mixture.length === 0) {
+        return <h1 className="text-2xl font-semibold mb-4">Select a Gas Mixture</h1>
+    }
+    const mixtureString = mixture
+        .map(component => `${component.weight.toFixed(1)}% ${component.name}`)
+        .join(" + ")
+
+    return (
+        <h1 className="text-2xl font-semibold mb-4">
+            {mixtureString}
+        </h1>
+    )
+}
+
+
 const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
                                                                    onSelect
                                                                }) => {
@@ -130,7 +147,7 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
     return (
         <div
             className="w-full max-w-screen-sm mx-auto my-4 p-4 bg-gray-100 rounded-lg shadow-lg flex flex-col items-center">
-            <h1 className="text-2xl font-semibold mb-4">Gas Mixture Selector</h1>
+            <GasMixtureTitle mixture={components} />
             <Select className={"w-full mb-4"}
                     isMulti
                     options={componentOptions}
