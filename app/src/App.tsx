@@ -1,4 +1,3 @@
-// App.tsx
 import React, { useState } from "react"
 import GasMixtureSelector from "./components/Selector"
 import Graph from "./components/Graph"
