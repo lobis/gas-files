@@ -268,7 +268,6 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
                                             // TODO: if too large, remove some elements
                                         }
                                         fetchData().then(r => {
-                                            console.log("Fetched data for: ", key)
                                             onSelect(dataMap.get(key))
                                         })
                                     } else {
@@ -351,7 +350,6 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
                                                 // TODO: if too large, remove some elements
                                             }
                                             fetchData().then(r => {
-                                                console.log("Fetched data for: ", key)
                                                 onSelect(dataMap.get(key))
                                             })
                                         } else {

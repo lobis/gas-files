@@ -1,5 +1,5 @@
 // Graph.tsx
-import React from "react"
+import React, {useState} from "react"
 import {
     LineChart,
     Line,
@@ -9,6 +9,9 @@ import {
     Tooltip,
     Legend, ResponsiveContainer
 } from "recharts"
+
+import ToggleButton from '@mui/material/ToggleButton';
+import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 
 import {Data} from "../App"
 
@@ -29,11 +32,37 @@ const Graph: React.FC<GraphProps> = ({data}) => {
         }
     )
 
+    const [magnitudeToGraph, setMagnitudeToGraph] = useState("electron_drift_velocity");
+
+    const handleChangeToMagnitudeToGraph = (
+        event: React.MouseEvent<HTMLElement>,
+        newMagnitudeToGraph: string,
+    ) => {
+        if (newMagnitudeToGraph === null) {
+            return;
+        }
+        setMagnitudeToGraph(newMagnitudeToGraph);
+    };
+
     return (
         <div
             className="graph w-full max-w-screen-lg bg-white mx-auto my-4 p-4 rounded-lg shadow-lg flex flex-col items-center">
 
             <h2 className="text-lg font-bold mb-4">Graph for {data.name}</h2>
+            <div>
+                <ToggleButtonGroup
+                    color="primary"
+                    value={magnitudeToGraph}
+                    exclusive
+                    onChange={handleChangeToMagnitudeToGraph}
+                >
+                    <ToggleButton value="electron_drift_velocity">Drift Velocity</ToggleButton>
+                    <ToggleButton value="electron_longitudinal_diffusion">Longitudinal Diffusion</ToggleButton>
+                    <ToggleButton value="electron_transversal_diffusion">Transversal Diffusion</ToggleButton>
+                    <ToggleButton value="electron_townsend">Townsend Coefficient</ToggleButton>
+                </ToggleButtonGroup>
+
+            </div>
             <div className="w-full" style={{height: 500}}>
                 <ResponsiveContainer width={"100%"}>
                     <LineChart
@@ -63,7 +92,12 @@ const Graph: React.FC<GraphProps> = ({data}) => {
                         <YAxis
                             allowDataOverflow
                             label={{
-                                value: "Drift Velocity",
+                                value: {
+                                    "electron_drift_velocity": "Drift Velocity [cm/s]",
+                                    "electron_longitudinal_diffusion": "Longitudinal Diffusion [cm²/s]",
+                                    "electron_transversal_diffusion": "Transversal Diffusion [cm²/s]",
+                                    "electron_townsend": "Townsend Coefficient [1/cm]"
+                                }[magnitudeToGraph],
                                 angle: -90,
                                 position: "insideLeft",
                                 offset: 5,
@@ -75,8 +109,8 @@ const Graph: React.FC<GraphProps> = ({data}) => {
                         <Tooltip/>
 
                         <Line
-                            type="monotone"
-                            dataKey="electron_drift_velocity"
+                            type="natural"
+                            dataKey={magnitudeToGraph}
                             stroke="#4F46E5"
                             strokeWidth={4}
                             dot={false}

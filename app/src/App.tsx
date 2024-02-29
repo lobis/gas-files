@@ -19,7 +19,6 @@ const App: React.FC = () => {
     const [data, setData] = useState<any>(null)
 
     const handleGasMixtureChange = (data: Data) => {
-        console.log("Setting data", data)
         setData(data)
     }
 
