@@ -30,6 +30,7 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
 
 
     const [mixtures, setMixtures] = useState<Map<string, number[][]>>(new Map())
+    const [selectedMixture, setSelectedMixture] = useState<string>("")
 
     const componentNameToLabel = (name: string) => {
         switch (name) {
@@ -104,13 +105,14 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
                 continue
             }
             const potentialMixture = selectedMixtures.concat(component).sort()
-            const fractions = mixtures.get(selectedMixtures.join(", "))
             option.isDisabled = mixtures.get(potentialMixture.join(", ")) === undefined
         }
         // TODO: this currently works but may not work in all cases: If we have "Ar" and "Ar + CH4 + C4H10" but not "Ar + CH4" or "Ar + C4H10", then the chain is broken at some point
         setComponentOptions(updatedOptions)
 
-        const availableFractions = mixtures.get(selectedMixtures.join(", "))
+        const mixtureName = selectedMixtures.join(", ")
+        setSelectedMixture(mixtureName)
+        const availableFractions = mixtures.get(mixtureName)
         console.log(availableFractions)
         // if the sum of all weights is not 100, set the last component to the remaining weight
         const sum = updatedGasComponents.reduce(
@@ -148,9 +150,21 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
                             step="1"
                             value={component.weight * 10.0}
                             onChange={event => {
+                                // TODO: unify in a single function
+
+                                const availableFractions = mixtures.get(selectedMixture)
+                                const availableValues = availableFractions?.map(fractions => fractions[index] * 100)
+
                                 const updatedGasComponents = [...components]
-                                const newWeight = parseInt(event.target.value) / 10.0
+                                const tentativeWeight = parseInt(event.target.value) / 10.0
                                 const oldWeight = updatedGasComponents[index].weight
+
+                                // set new weight to the closest available value
+                                let newWeight = availableValues?.reduce((prev, curr) => Math.abs(curr - tentativeWeight) < Math.abs(prev - tentativeWeight) ? curr : prev)
+                                if (newWeight === undefined) {
+                                    newWeight = oldWeight
+                                }
+
                                 updatedGasComponents[index].weight = newWeight
                                 setComponents(updatedGasComponents)
                             }}
@@ -162,10 +176,22 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
                                 min="0"
                                 max="100"
                                 step="0.5"
-                                value={component.weight}
+                                // round to 2 decimal places
+                                value={component.weight.toFixed(1)}
                                 onChange={event => {
+                                    const availableFractions = mixtures.get(selectedMixture)
+                                    const availableValues = availableFractions?.map(fractions => fractions[index] * 100)
+
                                     const updatedGasComponents = [...components]
-                                    const newWeight = parseFloat(event.target.value)
+                                    const tentativeWeight = parseFloat(event.target.value)
+                                    const oldWeight = updatedGasComponents[index].weight
+
+                                    // set new weight to the closest available value
+                                    let newWeight = availableValues?.reduce((prev, curr) => Math.abs(curr - tentativeWeight) < Math.abs(prev - tentativeWeight) ? curr : prev)
+                                    if (newWeight === undefined) {
+                                        newWeight = oldWeight
+                                    }
+
                                     updatedGasComponents[index].weight = newWeight
                                     setComponents(updatedGasComponents)
                                 }}
