@@ -1,14 +1,14 @@
 // GasMixtureSelector.tsx
-import React, {useState, useEffect} from "react"
+import React, { useState, useEffect } from "react"
 import Select from "react-select"
 
-import * as list from "./list.json"
+import list from "./list.json"
 
 interface GasMixtureSelectorProps {
     onSelect: (gasMixtures: string[]) => void
 }
 
-interface GasMixture {
+interface MixtureComponent {
     value: string
     label: string
 }
@@ -18,26 +18,58 @@ interface GasComponent {
     weight: number // 0-100 %
 }
 
+interface Mixture {
+    components: string[],
+    composition: number[]
+}
+
 const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
                                                                    onSelect
                                                                }) => {
 
-    const [availableMixtures, setAvailableMixtures] = useState<GasMixture[]>([])
+
+    const [mixtureComponents, setMixtureComponents] = useState<MixtureComponent[]>([])
+    const [mixtures, setMixtures] = useState<Map<string, number[][]>>(new Map())
+
+    const componentNameToLabel = (name: string) => {
+        switch (name) {
+            // TODO
+            default:
+                return name
+        }
+    }
 
     useEffect(() => {
-        console.log(list)
-        for(let item in list) {
-            console.log(item)
-            // console.log(mixture)
+        const componentNamesFromList = new Set<string>()
+        const mixturesMap: Map<string, number[][]> = new Map()
+        for (const mixture of list) {
+            const labels = mixture.components.labels.sort()
+            // add labels to the set
+            for (const label of labels) {
+                componentNamesFromList.add(label)
+            }
+            // add the composition to the map
+            const mapKey = labels.join(", ")
+            // check if key is already in the map
+            if (!mixturesMap.has(mapKey)) {
+                mixturesMap.set(mapKey, [mixture.components.fractions])
+            } else {
+                mixturesMap.get(mapKey)?.push(mixture.components.fractions)
+            }
         }
-    }, []);
 
-    const gasMixtures: GasMixture[] = [
-        {value: "Ar", label: "Argon (Ar)"},
-        {value: "Ne", label: "Neon (Ne)"},
-        {value: "C4H10", label: "Isobutane (iC4H10)"},
-        {value: "CH4", label: "Methane (CH4)"}
-    ]
+
+        setMixtureComponents(Array.from(componentNamesFromList).sort().map(name => {
+            return {
+                value: name,
+                label: componentNameToLabel(name)
+            } as MixtureComponent
+        }))
+
+        setMixtures(mixturesMap)
+        console.log(mixturesMap)
+    }, [])
+
 
     const [components, setComponents] = useState<GasComponent[]>([])
     const handleGasMixtureChange = (selectedOptions: any) => {
@@ -60,7 +92,7 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
                     component => component.name === mixture
                 )
             ) {
-                updatedGasComponents.push({name: mixture, weight: 0})
+                updatedGasComponents.push({ name: mixture, weight: 0 })
             }
         })
 
@@ -82,9 +114,9 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
         <div
             className="w-full max-w-screen-sm mx-auto my-4 p-4 bg-gray-100 rounded-lg shadow-lg flex flex-col items-center">
             <Select className={"w-full mb-4"}
-                    defaultValue={[gasMixtures[0]]}
+                    defaultValue={[mixtureComponents[0]]}
                     isMulti
-                    options={gasMixtures}
+                    options={mixtureComponents}
                     onChange={handleGasMixtureChange}
             />
             <div className="flex">
