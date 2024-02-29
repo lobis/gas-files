@@ -131,7 +131,13 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
         const mixtureName = selectedMixtures.join(", ")
         setSelectedMixture(mixtureName)
         const availableFractions = mixtures.get(mixtureName)
-        // if the sum of all weights is not 100, set the last component to the remaining weight
+
+        if (availableFractions === undefined) {
+            setComponents([])
+            return
+        }
+        // TODO: make sure these values are in the list of available fractions
+
         const sum = updatedGasComponents.reduce(
             (acc, component) => acc + component.weight,
             0
