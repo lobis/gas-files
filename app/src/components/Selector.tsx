@@ -114,6 +114,7 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
                 updatedGasComponents.push({ name: mixture, weight: 0 })
             }
         })
+        updatedGasComponents.sort((a, b) => a.name.localeCompare(b.name))
 
         const updatedOptions = [...componentOptions]
         for (const option of updatedOptions) {
@@ -136,18 +137,12 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
             setComponents([])
             return
         }
-        // TODO: make sure these values are in the list of available fractions
 
-        const sum = updatedGasComponents.reduce(
-            (acc, component) => acc + component.weight,
-            0
-        )
-        if (sum !== 100 && updatedGasComponents.length > 0) {
-            const lastComponentIndex = updatedGasComponents.length - 1
-            updatedGasComponents[lastComponentIndex].weight += 100 - sum
-        }
+        // set weights to the first available fractions
+        updatedGasComponents.forEach((component, index) => {
+            component.weight = availableFractions[0][index] * 100
+        })
 
-        updatedGasComponents.sort((a, b) => a.name.localeCompare(b.name))
         setComponents(updatedGasComponents)
     }
 
