@@ -30,7 +30,12 @@ const componentsNamesAndWeightsToKey = (components: GasComponent[]) => {
         .join(", ")
 }
 
-const GasMixtureTitle = ({mixture}: { mixture: GasComponent[] }) => {
+interface GasMixtureTitleProps {
+    mixture: GasComponent[];
+    dataUrlMap: Map<string, string>;
+}
+
+const GasMixtureTitle = ({mixture, dataUrlMap}: GasMixtureTitleProps) => {
     // if empty, return "Select a Gas Mixture", otherwise return the mixture with %
     if (mixture.length === 0) {
         return (
@@ -43,7 +48,25 @@ const GasMixtureTitle = ({mixture}: { mixture: GasComponent[] }) => {
         .map(component => `${component.weight.toFixed(1)}% ${component.name}`)
     )
 
-    return <h1 className="text-2xl font-semibold mb-4">{mixtureString}</h1>
+    const gasComponents: GasComponent[] = []
+    for (let i = 0; i < mixture.length; i++) {
+        gasComponents.push({
+            name: mixture[i].name,
+            weight: mixture[i].weight
+        })
+    }
+    const key = componentsNamesAndWeightsToKey(gasComponents)
+    const urlJson: string | undefined = dataUrlMap.get(key)
+    // remove the last .json
+    const urlGasFile: string | undefined = urlJson?.slice(0, -5)
+
+    return (<div className="flex flex-col items-center">
+        <h1 className="text-2xl font-semibold">{mixtureString}</h1>
+        <div className="flex text-lg">
+            {urlGasFile && <a href={urlGasFile} target="_blank" className="m-2">Gas File</a>}
+            {urlJson && <a href={urlJson} target="_blank" className="m-2">JSON</a>}
+        </div>
+    </div>)
 }
 
 const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
@@ -178,7 +201,7 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
     return (
         <div
             className="w-full max-w-screen-sm mx-auto my-4 p-4 bg-white rounded-lg shadow-lg flex flex-col items-center">
-            <GasMixtureTitle mixture={components}/>
+            <GasMixtureTitle mixture={components} dataUrlMap={dataUrlMap}/>
             <Select
                 className={"w-full mb-4"}
                 isMulti
