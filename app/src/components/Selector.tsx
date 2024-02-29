@@ -187,6 +187,17 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
                                 }
 
                                 updatedGasComponents[index].weight = newWeight
+
+                                // adjust remaining weights to keep sum at 100
+                                const sum = updatedGasComponents.reduce(
+                                    (acc, component) => acc + component.weight,
+                                    0
+                                )
+                                if (sum !== 100) {
+                                    const indexToAdjust = (index + 1) % updatedGasComponents.length
+                                    updatedGasComponents[indexToAdjust].weight += 100 - sum
+                                }
+
                                 setComponents(updatedGasComponents)
                             }}
                         />
@@ -214,6 +225,17 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
                                     }
 
                                     updatedGasComponents[index].weight = newWeight
+
+                                    // adjust remaining weights to keep sum at 100
+                                    const sum = updatedGasComponents.reduce(
+                                        (acc, component) => acc + component.weight,
+                                        0
+                                    )
+                                    if (sum !== 100) {
+                                        const indexToAdjust = (index + 1) % updatedGasComponents.length
+                                        updatedGasComponents[indexToAdjust].weight += 100 - sum
+                                    }
+
                                     setComponents(updatedGasComponents)
                                 }}
                             />
