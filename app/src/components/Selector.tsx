@@ -101,7 +101,7 @@ const GasMixtureSelector: React.FC<GasMixtureSelectorProps> = ({
             const componentNamesFromList = new Set<string>()
             const mixturesMap: Map<string, number[][]> = new Map()
             const dataUrlMap: Map<string, string> = new Map()
-            const list = await axios.get("gas/list.json")
+            const list = await axios.get("https://lobis.github.io/gas-files/files/list.json")
             const data = list.data
             for (const mixture of data) {
                 const labels = mixture.components.labels.sort()
