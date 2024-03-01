@@ -79,7 +79,7 @@ jobs:
           python scripts/test_list_matches_tree.py public/files/list.json public/index.html --files_path public/files/
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: public/
 
